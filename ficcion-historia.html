@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta data-i18n-content="ficcion.meta" name="description" content="Ficción e Historia: dictadura argentina y coreana a través de Infierno grande de Guillermo Martínez, Actos humanos de Han Kang y la película El taxista (2017).">
+    <title data-i18n="ficcion.1">Ficción e Historia - Dictadura Argentina y Coreana | SCH Puertas Abiertas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/lang/ficcion.js" defer></script>
+</head>
+<body data-page="ficcion" class="bg-stone-50">
+    <!-- Navbar -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="bg-[#800020] p-2 rounded-xl">
+                        <img src="img/logo.png" alt="Colegio Schönthal" width="50" height="10">
+                    </div>
+                    <div class="hidden sm:flex flex-col">
+                        <span class="font-bold text-xl text-gray-900" data-i18n="ficcion.2">SCH Puertas Abiertas</span>
+                        <span class="text-xs text-gray-500" data-i18n="ficcion.133">Diario Online</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-6 lg:gap-8 ml-auto mr-4 lg:mr-8">
+                    <a href="index.html#inicio" class="text-gray-700 hover:text-[#800020] transition-colors duration-200 font-medium" data-i18n="ficcion.3">Inicio</a>
+                    <a href="index.html#noticias" class="text-gray-700 hover:text-[#800020] transition-colors duration-200 font-medium" data-i18n="ficcion.4">Noticias</a>
+                    <button class="bg-[#800020] hover:bg-[#6b001b] text-white px-5 py-2 rounded-full transition-all duration-200 flex items-center gap-2 font-medium" data-i18n-text="ficcion.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        Buscar
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <div class="lang-switch" role="group" aria-label="Idioma / 언어">
+                        <button type="button" class="lang-btn is-active" data-lang-btn="es" aria-pressed="true">Esp</button>
+                        <span class="lang-sep" aria-hidden="true">–</span>
+                        <button type="button" class="lang-btn" data-lang-btn="ko" aria-pressed="false">한국어</button>
+                    </div>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-stone-100 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+                <a href="index.html#inicio" class="block px-4 py-2 text-gray-700 hover:bg-[#fdf2f4] hover:text-[#800020] rounded-lg transition-colors" data-i18n="ficcion.6">Inicio</a>
+                <a href="index.html#noticias" class="block px-4 py-2 text-gray-700 hover:bg-[#fdf2f4] hover:text-[#800020] rounded-lg transition-colors" data-i18n="ficcion.7">Noticias</a>
+                <button class="w-full bg-[#800020] hover:bg-[#6b001b] text-white px-4 py-2 rounded-full transition-all duration-200 flex items-center justify-center gap-2 font-medium" data-i18n-text="ficcion.8">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    Buscar
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cabecera del post: imagen de portada difuminada como fondo -->
+    <header class="post-hero">
+        <img src="img/2.jpg" alt="" aria-hidden="true" class="post-hero-bg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
+            <a href="index.html#noticias" class="inline-flex items-center gap-2 text-sm font-medium text-[#800020] hover:text-[#400010] transition-colors" data-i18n-text="ficcion.9">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Volver a Noticias
+            </a>
+
+            <div class="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-stone-600">
+                <span class="bg-[#800020] text-white px-3 py-1 rounded-full font-semibold" data-i18n="ficcion.10">Ficción e Historia</span>
+                <span data-i18n="ficcion.11">18 de Mayo 2026</span>
+                <span class="text-stone-400">·</span>
+                <span data-i18n="ficcion.12">3°B</span>
+                <span class="text-stone-400">·</span>
+                <span data-i18n="ficcion.13">12 min de lectura</span>
+            </div>
+
+            <h1 class="mt-4 text-4xl sm:text-5xl font-bold leading-tight tracking-tight text-[#400010]" data-i18n="ficcion.14">
+                Ficción e Historia
+            </h1>
+            <p class="mt-2 text-2xl font-semibold text-[#800020]" data-i18n="ficcion.15">Dictadura Argentina y Coreana · 아르헨티나와 한국의 독재</p>
+            <p class="mt-5 text-lg text-stone-600 max-w-2xl" data-i18n="ficcion.16">
+                Cuando la literatura y el cine miran de costado: dos dictaduras, tres obras y una misma
+                pregunta sobre la memoria, la crueldad y la dignidad humana.
+            </p>
+        </div>
+    </header>
+
+    <!-- Artículo -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+        <div class="lg:grid lg:grid-cols-[minmax(0,1fr)_260px] lg:gap-10">
+
+            <article class="post-content max-w-3xl bg-white rounded-3xl p-6 sm:p-10 ring-1 ring-gray-100 shadow-sm">
+                <p class="text-xl text-gray-700 leading-relaxed" data-i18n="ficcion.17">
+                    ¿Cómo cuenta la ficción lo que la historia no puede decir del todo? Este recorrido cruza
+                    dos dictaduras —la argentina (1976-1983) y la coreana— a través de un cuento, una novela y
+                    una película que eligen mirar la violencia de costado, desde lo simbólico, la memoria y
+                    las voces de quienes la padecieron.
+                </p>
+
+                <!-- Introducción: las tres obras -->
+                <h2 id="introduccion" data-i18n="ficcion.18">Introducción: tres obras, dos dictaduras</h2>
+
+                <div class="space-y-4 my-6">
+                    <div class="bg-stone-50 rounded-2xl p-6 ring-1 ring-gray-100 border-l-4 border-[#800020]">
+                        <span class="text-xs uppercase tracking-wide text-[#800020] font-semibold" data-i18n="ficcion.19">Argentina · Cuento</span>
+                        <h3 class="mt-1 mb-2 text-lg font-bold text-gray-900" data-i18n="ficcion.20">Infierno grande, de Guillermo Martínez</h3>
+                        <p class="mb-0" data-i18n="ficcion.21">
+                            Lectura de un cuento argentino, <em>Infierno grande</em> (Guillermo Martínez, escritor
+                            argentino) que se relaciona con la realidad de manera oblicua y simbólica, utilizando
+                            la aparente trama de un crimen en un pueblo pequeño que dialoga con los horrores de
+                            la última dictadura militar argentina (1976-1983).
+                        </p>
+                    </div>
+                    <div class="bg-stone-50 rounded-2xl p-6 ring-1 ring-gray-100 border-l-4 border-[#800020]">
+                        <span class="text-xs uppercase tracking-wide text-[#800020] font-semibold" data-i18n="ficcion.22">Corea · Novela</span>
+                        <h3 class="mt-1 mb-2 text-lg font-bold text-gray-900" data-i18n="ficcion.23">Actos humanos, de Han Kang</h3>
+                        <p class="mb-0" data-i18n="ficcion.24">
+                            Lectura de fragmento de <em>Actos humanos</em> (Han Kang, escritora coreana), libro
+                            que narra la brutal masacre de Gwangju ocurrida en mayo de 1980 en Corea del Sur. A
+                            través de diversas voces, muestra el padecimiento de los estudiantes y civiles
+                            reprimidos por la dictadura militar, la memoria y la crueldad humana.
+                        </p>
+                    </div>
+                    <div class="bg-stone-50 rounded-2xl p-6 ring-1 ring-gray-100 border-l-4 border-[#800020]">
+                        <span class="text-xs uppercase tracking-wide text-[#800020] font-semibold" data-i18n="ficcion.25">Corea · Cine</span>
+                        <h3 class="mt-1 mb-2 text-lg font-bold text-gray-900" data-i18n="ficcion.26">El taxista (2017)</h3>
+                        <p class="mb-0" data-i18n="ficcion.27">
+                            Además de la visualización en idioma original de fragmentos de la película
+                            <em>El taxista</em> (2017), en la que un viudo y padre de una niña de once años, Kim,
+                            un taxista que trabaja en medio de las protestas en Seúl sin comprender bien la
+                            profundidad del problema en el que está inmerso. Se topa con Peter: un reportero
+                            alemán al que se ofrece a trasladar hasta la localidad de Gwangju (Corea del Sur),
+                            donde se están produciendo las famosas revueltas de 1980.
+                        </p>
+                    </div>
+                </div>
+
+                <p data-i18n="ficcion.28">
+                    Las tres obras comparten un procedimiento: no muestran la dictadura de frente, sino a
+                    través de un crimen pequeño, de un testimonio íntimo o de un viaje que se vuelve
+                    involuntario. Esa distancia es, justamente, lo que permite decir lo que el relato oficial
+                    silencia.
+                </p>
+
+                <!-- El relato histórico -->
+                <h2 id="relato-historico" data-i18n="ficcion.29">El relato histórico y el relato ficcional</h2>
+                <p data-i18n="ficcion.30">
+                    Los <strong>relatos históricos</strong> son textos expositivos-explicativos sobre hechos
+                    reales que ocurrieron en el pasado. Su objetivo es que los lectores se informen o estudien
+                    a partir de ellos, por eso presentan los datos de manera clara y comprensible. Al tratarse
+                    de relatos, la estructura de la trama explicativa se intercala con recursos de la trama
+                    narrativa.
+                </p>
+                <p data-i18n="ficcion.31">
+                    Como en la mayor parte de los textos expositivos, los autores de los relatos históricos son
+                    <strong>voces autorizadas</strong>: poseen estudios o realizan investigaciones vinculadas
+                    con el tema sobre el que escriben.
+                </p>
+
+                <div class="my-8 overflow-hidden rounded-2xl ring-1 ring-gray-100">
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-[#800020] text-white">
+                            <tr>
+                                <th scope="col" class="px-4 py-3 font-semibold" data-i18n="ficcion.32">Relato histórico</th>
+                                <th scope="col" class="px-4 py-3 font-semibold" data-i18n="ficcion.33">Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 bg-white">
+                            <tr>
+                                <td class="px-4 py-3 font-semibold text-gray-900" data-i18n="ficcion.34">Estructura</td>
+                                <td class="px-4 py-3" data-i18n="ficcion.35">Textos expositivos con introducción, desarrollo y conclusiones, ordenados en temas y subtemas.</td>
+                            </tr>
+                            <tr class="bg-stone-50">
+                                <td class="px-4 py-3 font-semibold text-gray-900" data-i18n="ficcion.36">Veracidad</td>
+                                <td class="px-4 py-3" data-i18n="ficcion.37">El autor se rige por el principio de veracidad: consulta fuentes, documentos y testimonios para brindar información certera.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-semibold text-gray-900" data-i18n="ficcion.38">Perspectiva</td>
+                                <td class="px-4 py-3" data-i18n="ficcion.39">Entre los hechos y el momento en que se escriben hay un período de tiempo; por eso el relato adopta una perspectiva sobre el pasado.</td>
+                            </tr>
+                            <tr class="bg-stone-50">
+                                <td class="px-4 py-3 font-semibold text-gray-900" data-i18n="ficcion.40">Causalidad</td>
+                                <td class="px-4 py-3" data-i18n="ficcion.41">Se establecen relaciones de causa-consecuencia: los hechos previos propician los posteriores.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-semibold text-gray-900" data-i18n="ficcion.42">Orden cronológico</td>
+                                <td class="px-4 py-3" data-i18n="ficcion.43">Los hechos se narran según el orden en que sucedieron, lo que clarifica la secuencia temporal.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Contexto histórico -->
+                <h2 id="corea" data-i18n="ficcion.44">Corea del Sur antes de 1980</h2>
+                <p data-i18n="ficcion.45">
+                    A comienzos de 1980, Corea del Sur era un país atravesado por una profunda tensión política
+                    y social. Desde 1961 gobernaba el general <strong>Park Chung-hee</strong>, quien había
+                    llegado al poder mediante un golpe de Estado.
+                </p>
+                <p data-i18n="ficcion.46">
+                    Durante su mandato impulsó un acelerado proceso de industrialización, conocido como el
+                    <strong>«Milagro del río Han»</strong>, que transformó al país en una potencia económica
+                    emergente. Sin embargo, ese crecimiento estuvo acompañado por una fuerte represión
+                    política, censura, persecución de opositores y graves violaciones a los derechos humanos.
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-4 my-6">
+                    <div class="bg-stone-50 rounded-2xl p-6 ring-1 ring-gray-100 border-t-4 border-[#D98496]">
+                        <h3 class="mt-0 mb-2 text-lg font-bold text-[#800020]" data-i18n="ficcion.47">El milagro económico</h3>
+                        <p class="mb-0" data-i18n="ficcion.48">
+                            Industrialización acelerada, crecimiento urbano y una economía que se proyectó al
+                            mundo como potencia emergente.
+                        </p>
+                    </div>
+                    <div class="bg-stone-50 rounded-2xl p-6 ring-1 ring-gray-100 border-t-4 border-[#800020]">
+                        <h3 class="mt-0 mb-2 text-lg font-bold text-[#800020]" data-i18n="ficcion.49">El costo humano</h3>
+                        <p class="mb-0" data-i18n="ficcion.50">
+                            Represión, censura, persecución de opositores y violaciones sistemáticas a los
+                            derechos humanos.
+                        </p>
+                    </div>
+                </div>
+
+                <p data-i18n="ficcion.51">
+                    En 1972, Park consolidó su poder eliminando la antigua Constitución e imponiendo una nueva
+                    que ampliaba sus facultades, convirtiendo su gobierno en una dictadura de hecho. Hacia
+                    1979, el descontento social era creciente, y la declaración de la ley marcial para frenar
+                    las manifestaciones fue una señal de la crisis que atravesaba el régimen.
+                </p>
+                <p data-i18n="ficcion.52">
+                    En octubre de 1979, Park fue asesinado por el director de los servicios de inteligencia.
+                    Muchos ciudadanos esperaban que este hecho abriera el camino hacia la democracia. Pero no
+                    fue así.
+                </p>
+
+                <!-- Gwangju -->
+                <h2 id="gwangju" data-i18n="ficcion.53">El ascenso de Chun y el estallido en Gwangju</h2>
+                <p data-i18n="ficcion.54">
+                    Tras el asesinato, el poder quedó en manos de otro militar, el general
+                    <strong>Chun Doo-hwan</strong>. En mayo de 1980, bajo el pretexto de una supuesta amenaza
+                    norcoreana, Chun extendió la ley marcial a todo el país.
+                </p>
+                <p data-i18n="ficcion.55">
+                    Se cerraron universidades, se prohibieron las actividades políticas y se restringió aún más
+                    la libertad de prensa. Después de casi dos décadas de autoritarismo, gran parte de la
+                    población reconocía las señales de una nueva dictadura.
+                </p>
+                <p data-i18n="ficcion.56">
+                    En la ciudad sureña de Gwangju, las manifestaciones estudiantiles crecieron rápidamente. A
+                    los estudiantes se sumaron trabajadores y ciudadanos para quienes la industrialización
+                    «milagrosa» había significado jornadas extenuantes, condiciones laborales peligrosas y una
+                    creciente conciencia política, especialmente tras procesos recientes de sindicalización.
+                </p>
+
+                <div class="bg-[#fdf2f4] rounded-2xl p-6 my-8 ring-1 ring-[#800020]/10">
+                    <p class="font-semibold text-[#800020] mb-1" data-i18n="ficcion.57">La represión</p>
+                    <p class="mb-0" data-i18n="ficcion.58">
+                        El gobierno envió tropas paracaidistas para reprimir las protestas. La violencia fue
+                        extrema: golpes, detenciones arbitrarias y disparos contra civiles desarmados. Lejos de
+                        sofocar el conflicto, la brutalidad militar generó una mayor movilización popular.
+                    </p>
+                </div>
+
+                <p data-i18n="ficcion.59">
+                    Durante algunos días, el ejército se retiró del centro de la ciudad y Gwangju quedó
+                    brevemente bajo el control de comités civiles organizados por sus propios habitantes. Fue
+                    un momento excepcional de autogobierno y solidaridad, que pronto sería aplastado por una
+                    represión aún más sangrienta cuando el ejército retomó el control por la fuerza.
+                </p>
+
+                <h3 data-i18n="ficcion.60">Memoria y literatura</h3>
+                <p data-i18n="ficcion.61">
+                    La Masacre de Gwangju se convirtió en un símbolo de la lucha por la democracia en Corea del
+                    Sur. Durante años, el Estado intentó presentar los hechos como una revuelta comunista y
+                    ocultar la magnitud de la represión. Con el tiempo, investigaciones y procesos judiciales
+                    reconocieron la responsabilidad estatal.
+                </p>
+                <p data-i18n="ficcion.62">
+                    En <em>Actos humanos</em>, Han Kang reconstruye literariamente ese trauma colectivo,
+                    explorando no solo la violencia física, sino también sus consecuencias en la memoria, el
+                    duelo y la dignidad humana. La introducción de Deborah Smith permite comprender que la
+                    novela no surge de la ficción aislada, sino de un acontecimiento histórico real que marcó
+                    profundamente a la sociedad surcoreana.
+                </p>
+
+                <!-- El relato ficcional -->
+                <h2 id="realismo" data-i18n="ficcion.63">El relato ficcional: el realismo</h2>
+                <p data-i18n="ficcion.64">
+                    El <strong>Realismo</strong> es un movimiento artístico y literario que surgió en Francia a
+                    mediados del siglo XIX. Su propósito era representar la realidad de la época de la manera
+                    más fiel posible.
+                </p>
+                <p data-i18n="ficcion.65">
+                    Por eso, los relatos realistas narran hechos <strong>verosímiles</strong>, es decir,
+                    creíbles o posibles dentro del mundo tal como lo conocemos. No necesariamente cuentan
+                    hechos reales, pero sí podrían ocurrir. Para lograr esa sensación de realidad, los textos
+                    utilizan distintas estrategias de verosimilitud.
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-4 my-6">
+                    <div class="bg-stone-50 rounded-2xl p-5 ring-1 ring-gray-100">
+                        <h3 class="mt-0 mb-2 text-base font-bold text-[#800020]" data-i18n="ficcion.66">Personajes comunes</h3>
+                        <p class="mb-0 text-sm" data-i18n="ficcion.67">
+                            Los protagonistas no suelen ser héroes extraordinarios, sino personas comunes:
+                            trabajadores, estudiantes, familias, vecinos. Sus problemas también son cotidianos.
+                        </p>
+                    </div>
+                    <div class="bg-stone-50 rounded-2xl p-5 ring-1 ring-gray-100">
+                        <h3 class="mt-0 mb-2 text-base font-bold text-[#800020]" data-i18n="ficcion.68">Descripciones detalladas</h3>
+                        <p class="mb-0 text-sm" data-i18n="ficcion.69">
+                            El narrador describe con precisión espacios, objetos, gestos y situaciones sociales
+                            para que el lector «vea» la escena y la sienta cercana.
+                        </p>
+                    </div>
+                    <div class="bg-stone-50 rounded-2xl p-5 ring-1 ring-gray-100">
+                        <h3 class="mt-0 mb-2 text-base font-bold text-[#800020]" data-i18n="ficcion.70">Objetos y personalidades</h3>
+                        <p class="mb-0 text-sm" data-i18n="ficcion.71">
+                            Los objetos cotidianos —una birome, un plato de comida, una ventana con rejas—
+                            anclan la historia en la realidad. Los personajes tienen miedos, dudas y
+                            contradicciones.
+                        </p>
+                    </div>
+                    <div class="bg-stone-50 rounded-2xl p-5 ring-1 ring-gray-100">
+                        <h3 class="mt-0 mb-2 text-base font-bold text-[#800020]" data-i18n="ficcion.72">Uso de distintas voces</h3>
+                        <p class="mb-0 text-sm" data-i18n="ficcion.73">
+                            Narrador en primera persona (testimonio, memoria), en tercera persona o diálogos que
+                            reproducen el habla cotidiana. La diversidad de perspectivas refuerza la sensación
+                            de autenticidad.
+                        </p>
+                    </div>
+                </div>
+
+                <blockquote class="my-6 border-l-4 border-[#800020]/30 pl-5 italic text-gray-600">
+                    <p class="mb-2" data-i18n="ficcion.74">
+                        «Un texto ficcional puede no ser “real”, pero puede decir verdades profundas sobre la
+                        sociedad y la historia».
+                    </p>
+                    <p class="mb-0" data-i18n="ficcion.75">
+                        «La literatura no copia la realidad: la reconstruye para que podamos comprenderla
+                        mejor».
+                    </p>
+                </blockquote>
+
+                <!-- Fragmento -->
+                <h2 id="fragmento" data-i18n="ficcion.76">Fragmento de <em>Actos humanos</em>: «El prisionero» (1990)</h2>
+                <p data-i18n="ficcion.77">
+                    El siguiente fragmento pertenece a la novela de Han Kang y reconstruye, desde la voz de un
+                    detenido, la experiencia de la tortura y la deshumanización en los centros de detención de
+                    la dictadura.
+                </p>
+
+                <div class="space-y-4 bg-stone-50 rounded-2xl p-6 sm:p-8 my-8 ring-1 ring-gray-100">
+                    <p class="text-sm uppercase tracking-wide text-[#800020] font-semibold mb-4" data-i18n="ficcion.78">The Prisoner · El prisionero</p>
+
+                    <p data-i18n="ficcion.79">
+                        Era un biro perfectamente ordinario, un biro Monami negro. Extendieron mis dedos, los
+                        torcieron uno sobre el otro y atascaron la pluma entre ellos. Esta era la mano
+                        izquierda, por supuesto. Porque necesitaba mi mano derecha para escribir el informe. Era
+                        casi soportable, al principio. Pero tener esa pluma atascada en el mismo lugar todos los
+                        días pronto frotó la carne cruda, y un lío de sangre y secreción acuosa rezumaba de la
+                        herida. Más tarde se puso lo suficientemente mal como para que realmente pudieras ver el
+                        hueso, un brillo de blanco en medio de la suciedad. Me dieron un poco de algodón
+                        empapado en alcohol para presionar contra él, pero solo entonces, solo una vez que el
+                        hueso se mostraba a través. Había otros noventa hombres en la celda conmigo, y más de la
+                        mitad tenía ese mismo trozo de algodón pegado entre sus dedos. No se les permitió hablar
+                        entre sí. Tus ojos simplemente se movían hacia ese trozo de algodón y luego hacia arriba
+                        para encontrarse con la mirada del otro hombre, pero solo por una fracción de segundo.
+                    </p>
+
+                    <p data-i18n="ficcion.80">
+                        Eso fue suficiente para reconocer la marca que compartiste. No hay necesidad de
+                        quedarse. Había asumido que le darían tiempo a la herida para que sanara una vez que
+                        hubiera entrado en ese estado. Me equivoqué. En cambio, conocí un nuevo dolor, cuando se
+                        quitó el algodón y la pluma se atascó entre los dedos, machacando esa carne cruda en una
+                        pulpa.
+                    </p>
+
+                    <p data-i18n="ficcion.81">
+                        Había cinco celdas en total, dispuestas en una especie de forma de abanico. En el área
+                        central al otro lado de las rejas, los soldados con sus armas podían vigilar las cinco
+                        celdas al mismo tiempo. Cuando nos metieron por primera vez y cerraron las puertas
+                        detrás de nosotros, ni uno solo de nosotros se atrevió a preguntar a dónde nos habían
+                        traído. Incluso los niños de la escuela secundaria sabían lo suficiente como para
+                        mantener la boca cerrada. Nos quedamos en silencio, evitamos los ojos del otro.
+                        Necesitábamos tiempo para procesar lo que habíamos experimentado esa mañana. Una hora
+                        escasa de desesperación silenciosa, esa fue la última gracia que nos dejó como humanos.
+                    </p>
+
+                    <p data-i18n="ficcion.82">
+                        Ese biro Monami negro estaba allí sobre la mesa cada vez que entraba en la sala de
+                        interrogatorios. Acostado en espera. La primera etapa de una secuencia que se desarrolló
+                        exactamente de la misma manera cada vez, todo el proceso aparentemente diseñado para
+                        martillar un solo hecho: que mi cuerpo ya no era mío. Que mi vida había sido quitada por
+                        completo de mis manos, y lo único que se me permitía hacer ahora era experimentar dolor.
+                        Dolor tan intenso que me sentía seguro de que iba a perder la cabeza, tan horrible que
+                        literalmente perdí el control de mi cuerpo, cabreándome y cagándome. Una vez que la
+                        secuencia había llegado a su conclusión habitual, comenzaron las preguntas.
+                    </p>
+
+                    <p class="mb-0" data-i18n="ficcion.83">
+                        La voz que hacía las preguntas nunca era otra cosa que calmada y compuesta, pero
+                        cualquier respuesta que hiciera inevitablemente traería el mismo resultado: una culata de
+                        rifle en la cara. No podía luchar contra el instinto que me hizo encogerme contra la
+                        pared y proteger mi cabeza con los brazos, a pesar de que eso solo empeoró las cosas.
+                        Cuando me caí, me estamparon en la espalda con sus botas del ejército. Sólo hasta que
+                        estuve a punto de perder el conocimiento; luego me volteaban y me pisoteaban las
+                        espinillas en su lugar.
+                    </p>
+                </div>
+
+                <p data-i18n="ficcion.84">
+                    El fragmento muestra cómo un objeto mínimo —una birome— puede convertirse en un
+                    instrumento de tortura y, al mismo tiempo, en un símbolo de la memoria compartida. La
+                    literatura no necesita describir la dictadura entera: le basta con un detalle cotidiano
+                    para hacerla sentir.
+                </p>
+
+                <!-- Línea de tiempo -->
+                <h2 id="linea-de-tiempo" data-i18n="ficcion.85">Línea de tiempo: dos dictaduras en paralelo</h2>
+
+                <div class="border-l-2 border-[#800020]/20 ml-2 my-8 space-y-8">
+                    <div class="relative pl-7">
+                        <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-[#800020] ring-4 ring-white"></span>
+                        <p class="text-sm font-bold text-[#800020] mb-1">1961</p>
+                        <p class="text-sm text-gray-600" data-i18n="ficcion.86">
+                            El general Park Chung-hee llega al poder en Corea del Sur mediante un golpe de
+                            Estado.
+                        </p>
+                    </div>
+                    <div class="relative pl-7">
+                        <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-[#800020] ring-4 ring-white"></span>
+                        <p class="text-sm font-bold text-[#800020] mb-1">1972</p>
+                        <p class="text-sm text-gray-600" data-i18n="ficcion.87">
+                            Park impone una nueva Constitución que amplía sus facultades y convierte su gobierno
+                            en una dictadura de hecho.
+                        </p>
+                    </div>
+                    <div class="relative pl-7">
+                        <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-[#800020] ring-4 ring-white"></span>
+                        <p class="text-sm font-bold text-[#800020] mb-1">1976–1983</p>
+                        <p class="text-sm text-gray-600" data-i18n="ficcion.88">
+                            Última dictadura militar en la Argentina: el horror se narra de forma oblicua en
+                            <em>Infierno grande</em>, de Guillermo Martínez.
+                        </p>
+                    </div>
+                    <div class="relative pl-7">
+                        <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-[#800020] ring-4 ring-white"></span>
+                        <p class="text-sm font-bold text-[#800020] mb-1">1979</p>
+                        <p class="text-sm text-gray-600" data-i18n="ficcion.89">
+                            Park Chung-hee es asesinado por el director de los servicios de inteligencia. La
+                            expectativa democrática se frustra.
+                        </p>
+                    </div>
+                    <div class="relative pl-7">
+                        <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-[#800020] ring-4 ring-white"></span>
+                        <p class="text-sm font-bold text-[#800020] mb-1">1980</p>
+                        <p class="text-sm text-gray-600" data-i18n="ficcion.90">
+                            Chun Doo-hwan extiende la ley marcial a todo el país. En mayo, las protestas de
+                            Gwangju son reprimidas con una violencia extrema.
+                        </p>
+                    </div>
+                    <div class="relative pl-7">
+                        <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-[#800020] ring-4 ring-white"></span>
+                        <p class="text-sm font-bold text-[#800020] mb-1">1983</p>
+                        <p class="text-sm text-gray-600" data-i18n="ficcion.91">
+                            La Argentina recupera la democracia. La memoria de lo ocurrido se convierte en tema
+                            de la literatura y del cine.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Guía de lectura -->
+                <h2 id="guia" data-i18n="ficcion.92">Guía de lectura</h2>
+
+                <h3 data-i18n="ficcion.93">Sobre el contexto histórico</h3>
+                <ol>
+                    <li data-i18n="ficcion.94">¿Qué características tenía el gobierno de Park Chung-hee?</li>
+                    <li data-i18n="ficcion.95">¿Por qué el «Milagro del río Han» no significó bienestar para todos los sectores sociales?</li>
+                    <li data-i18n="ficcion.96">¿Qué medidas tomó Chun Doo-hwan al asumir el poder?</li>
+                    <li data-i18n="ficcion.97">¿Por qué la ciudad de Gwangju se convirtió en el centro de las protestas?</li>
+                    <li data-i18n="ficcion.98">¿Cómo respondió el Estado ante las manifestaciones?</li>
+                    <li data-i18n="ficcion.99">¿Por qué podemos afirmar que se trató de una dictadura? Fundamentá con ejemplos del texto.</li>
+                    <li data-i18n="ficcion.100">Explicá con tus palabras: <em>el crecimiento económico no siempre implica democracia ni justicia social</em>.</li>
+                    <li data-i18n="ficcion.101">¿Qué importancia tiene el reconocimiento oficial de los hechos años después?</li>
+                </ol>
+
+                <h3 data-i18n="ficcion.102">Sobre el fragmento de <em>Actos humanos</em></h3>
+                <ol>
+                    <li data-i18n="ficcion.103">¿Por qué el objeto cotidiano (la birome) resulta más perturbador que un instrumento de tortura «tradicional»?</li>
+                    <li data-i18n="ficcion.104">¿Cómo se construye la deshumanización en el texto?</li>
+                    <li data-i18n="ficcion.105">¿Qué función cumple el hambre en el proceso de degradación?</li>
+                    <li data-i18n="ficcion.106">¿Por qué el narrador insiste en la mirada?</li>
+                    <li data-i18n="ficcion.107">¿Qué efecto produce el final, cuando compara los ojos de Kim con los propios?</li>
+                </ol>
+
+                <div class="border-t border-gray-100 mt-12 pt-8">
+                    <p class="text-gray-600" data-i18n="ficcion.108">
+                        Dos dictaduras, dos continentes y tres obras que eligen no mostrar el horror de frente.
+                        La ficción no reemplaza a la historia: la vuelve habitable para la memoria y nos obliga
+                        a preguntarnos qué hacemos con lo que sabemos.
+                    </p>
+                    <a href="index.html#noticias" class="inline-flex items-center gap-2 mt-4 text-[#800020] font-semibold hover:underline" data-i18n-text="ficcion.109">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                        </svg>
+                        Volver a todas las noticias
+                    </a>
+                </div>
+            </article>
+
+            <!-- Índice lateral -->
+            <aside class="hidden lg:block">
+                <div class="sticky top-24">
+                    <div class="bg-white rounded-3xl p-6 ring-1 ring-gray-100 shadow-sm">
+                        <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-4" data-i18n="ficcion.110">En este artículo</p>
+                        <nav class="text-sm">
+                            <ul class="space-y-1">
+                                <li data-i18n="ficcion.111"><a href="#introduccion" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">Introducción</a></li>
+                                <li data-i18n="ficcion.112"><a href="#relato-historico" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">El relato histórico</a></li>
+                                <li data-i18n="ficcion.113"><a href="#corea" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">Corea antes de 1980</a></li>
+                                <li data-i18n="ficcion.114"><a href="#gwangju" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">El estallido en Gwangju</a></li>
+                                <li data-i18n="ficcion.115"><a href="#realismo" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">El relato ficcional</a></li>
+                                <li data-i18n="ficcion.116"><a href="#fragmento" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">Fragmento: El prisionero</a></li>
+                                <li data-i18n="ficcion.117"><a href="#linea-de-tiempo" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">Línea de tiempo</a></li>
+                                <li data-i18n="ficcion.118"><a href="#guia" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">Guía de lectura</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="mt-4 bg-white rounded-3xl p-6 ring-1 ring-gray-100 shadow-sm">
+                        <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-3" data-i18n="ficcion.119">Sobre este post</p>
+                        <dl class="text-sm space-y-2">
+                            <div class="flex justify-between gap-3">
+                                <dt class="text-gray-500" data-i18n="ficcion.120">Sección</dt>
+                                <dd class="text-gray-900 text-right" data-i18n="ficcion.121">Ficción e Historia</dd>
+                            </div>
+                            <div class="flex justify-between gap-3">
+                                <dt class="text-gray-500" data-i18n="ficcion.122">Curso</dt>
+                                <dd class="text-gray-900 text-right" data-i18n="ficcion.123">3°B</dd>
+                            </div>
+                            <div class="flex justify-between gap-3">
+                                <dt class="text-gray-500" data-i18n="ficcion.124">Fecha</dt>
+                                <dd class="text-gray-900 text-right">18/05/2026</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Logo y descripción -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-[#800020] p-2 rounded-xl">
+                            <img src="img/logo.png" alt="Colegio Schönthal" width="50" height="10">
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-bold text-xl text-gray-900" data-i18n="ficcion.125">EcoEscolar</span>
+                            <span class="text-sm text-gray-500" data-i18n="ficcion.126">Tu voz estudiantil</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4 max-w-md" data-i18n="ficcion.127">
+                        El periódico digital oficial de nuestra comunidad estudiantil.
+                        Creado por estudiantes, para estudiantes. Compartiendo historias,
+                        eventos y logros de nuestra escuela.
+                    </p>
+                </div>
+
+                <!-- Contacto -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-gray-900" data-i18n="ficcion.128">Contacto</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start gap-2" data-i18n-text="ficcion.129">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-0.5 flex-shrink-0 text-[#800020]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span>maildepruebaxd@schonthal.esc.edu.ar</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-0.5 flex-shrink-0 text-[#800020]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span>+54 9 11 1234-5678</span>
+                        </li>
+                        <li class="flex items-start gap-2" data-i18n-text="ficcion.130">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-0.5 flex-shrink-0 text-[#800020]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Colegio Schönthal, Ciudad Autónoma de Buenos Aires</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-100 mt-8 pt-8 text-center text-gray-500">
+                <p data-i18n="ficcion.131">© 2026 SCH Puertas Abiertas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

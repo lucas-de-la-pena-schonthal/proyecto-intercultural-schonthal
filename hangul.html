@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta data-i18n-content="hangul.meta" name="description" content="Contexto histórico y diseño del Hangul: del monopolio de la élite Yangban al milagro lingüístico del Rey Sejong. Análisis, cine y difusión del alfabeto coreano.">
+    <title data-i18n="hangul.1">Hangul - Alfabeto Coreano | SCH Puertas Abiertas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/lang/hangul.js" defer></script>
+</head>
+<body data-page="hangul" class="bg-stone-50">
+    <!-- Navbar -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="bg-[#800020] p-2 rounded-xl">
+                        <img src="img/logo.png" alt="Colegio Schönthal" width="50" height="10">
+                    </div>
+                    <div class="hidden sm:flex flex-col">
+                        <span class="font-bold text-xl text-gray-900" data-i18n="hangul.2">SCH Puertas Abiertas</span>
+                        <span class="text-xs text-gray-500" data-i18n="hangul.144">Diario Online</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-6 lg:gap-8 ml-auto mr-4 lg:mr-8">
+                    <a href="index.html#inicio" class="text-gray-700 hover:text-[#800020] transition-colors duration-200 font-medium" data-i18n="hangul.3">Inicio</a>
+                    <a href="index.html#noticias" class="text-gray-700 hover:text-[#800020] transition-colors duration-200 font-medium" data-i18n="hangul.4">Noticias</a>
+                    <button class="bg-[#800020] hover:bg-[#6b001b] text-white px-5 py-2 rounded-full transition-all duration-200 flex items-center gap-2 font-medium" data-i18n-text="hangul.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        Buscar
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <div class="lang-switch" role="group" aria-label="Idioma / 언어">
+                        <button type="button" class="lang-btn is-active" data-lang-btn="es" aria-pressed="true">Esp</button>
+                        <span class="lang-sep" aria-hidden="true">–</span>
+                        <button type="button" class="lang-btn" data-lang-btn="ko" aria-pressed="false">한국어</button>
+                    </div>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-stone-100 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+                <a href="index.html#inicio" class="block px-4 py-2 text-gray-700 hover:bg-[#fdf2f4] hover:text-[#800020] rounded-lg transition-colors" data-i18n="hangul.6">Inicio</a>
+                <a href="index.html#noticias" class="block px-4 py-2 text-gray-700 hover:bg-[#fdf2f4] hover:text-[#800020] rounded-lg transition-colors" data-i18n="hangul.7">Noticias</a>
+                <button class="w-full bg-[#800020] hover:bg-[#6b001b] text-white px-4 py-2 rounded-full transition-all duration-200 flex items-center justify-center gap-2 font-medium" data-i18n-text="hangul.8">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    Buscar
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cabecera del post: imagen de portada difuminada como fondo -->
+    <header class="post-hero">
+        <img src="img/1.png" alt="" aria-hidden="true" class="post-hero-bg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
+            <a href="index.html#noticias" class="inline-flex items-center gap-2 text-sm font-medium text-[#800020] hover:text-[#400010] transition-colors" data-i18n-text="hangul.9">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Volver a Noticias
+            </a>
+
+            <div class="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-stone-600">
+                <span class="bg-[#800020] text-white px-3 py-1 rounded-full font-semibold" data-i18n="hangul.10">Análisis y explicación de su origen</span>
+                <span data-i18n="hangul.11">18 de Mayo 2026</span>
+                <span class="text-stone-400">·</span>
+                <span data-i18n="hangul.12">2°B</span>
+                <span class="text-stone-400">·</span>
+                <span data-i18n="hangul.13">10 min de lectura</span>
+            </div>
+
+            <h1 class="mt-4 text-4xl sm:text-5xl font-bold leading-tight tracking-tight text-[#400010]" data-i18n="hangul.14">
+                Hangul - Alfabeto Coreano
+            </h1>
+            <p class="mt-2 text-2xl font-semibold text-[#800020]" data-i18n="hangul.15">한글의 유래 분석</p>
+            <p class="mt-5 text-lg text-stone-600 max-w-2xl" data-i18n="hangul.16">
+                De la opresión de la élite al milagro lingüístico: contexto histórico y diseño
+                del alfabeto que le devolvió la voz al pueblo coreano.
+            </p>
+        </div>
+    </header>
+
+    <!-- Artículo -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+        <div class="lg:grid lg:grid-cols-[minmax(0,1fr)_260px] lg:gap-10">
+
+            <article class="post-content max-w-3xl bg-white rounded-3xl p-6 sm:p-10 ring-1 ring-gray-100 shadow-sm">
+                <p class="text-xl text-gray-700 leading-relaxed" data-i18n="hangul.17">
+                    El desarrollo del <strong>Hangul</strong> (denominado originalmente <em>Hunminjeongeum</em>,
+                    «Los sonidos correctos para la instrucción del pueblo») en 1443 bajo el liderazgo del
+                    <strong>Rey Sejong de Joseon</strong> trasciende la mera invención de un abecedario:
+                    representó una revolución política, filosófica y pedagógica destinada a romper el
+                    monopolio del conocimiento en la península coreana.
+                </p>
+
+
+                <!-- El choque filosófico -->
+                <h2 id="filosofia" data-i18n="hangul.18">El choque filosófico: budismo vs. neoconfucianismo</h2>
+                <p data-i18n="hangul.19">
+                    Durante siglos, Corea estuvo moldeada por dos grandes corrientes de pensamiento cuyas
+                    visiones sobre el ser humano y el Estado chocaban frontalmente:
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-4 my-6">
+                    <div class="bg-stone-50 rounded-2xl p-6 ring-1 ring-gray-100 border-t-4 border-[#D98496]">
+                        <h3 class="mt-0 mb-2 text-lg font-bold text-[#800020]" data-i18n="hangul.20">Budismo</h3>
+                        <p data-i18n="hangul.21">
+                            Centrado en la transformación interior, la meditación, la compasión y el desapego
+                            para liberarse del sufrimiento personal. Promovía una vida enfocada en la iluminación
+                            individual, a menudo apartada de las obligaciones mundanas en los monasterios.
+                        </p>
+                    </div>
+                    <div class="bg-stone-50 rounded-2xl p-6 ring-1 ring-gray-100 border-t-4 border-[#800020]">
+                        <h3 class="mt-0 mb-2 text-lg font-bold text-[#800020]" data-i18n="hangul.22">Neoconfucianismo</h3>
+                        <p data-i18n="hangul.23">
+                            Centrado en el orden social, la jerarquía, el respeto a la autoridad y la piedad
+                            filial. Para esta filosofía, el bienestar dependía de que cada individuo cumpliera
+                            rigurosamente su rol dentro de la familia y el Estado.
+                        </p>
+                    </div>
+                </div>
+
+                <p data-i18n="hangul.24">
+                    Cuando la dinastía Joseon asumió el poder en 1392, adoptó el neoconfucianismo como ideología
+                    oficial y persiguió al budismo. Los nuevos gobernantes consideraban que los monasterios
+                    acumulaban demasiada riqueza y poder, que los hombres se ordenaban monjes para evadir
+                    impuestos y el servicio militar, y que el enfoque budista de salvación individual no servía
+                    para gobernar un país. Como resultado, el Estado confiscó tierras, cerró templos y relegó a
+                    los monjes a la clase social más baja.
+                </p>
+
+                <!-- Contexto sociopolítico -->
+                <h2 id="contexto" data-i18n="hangul.25">El contexto sociopolítico: control de élite y resistencia</h2>
+                <ul>
+                    <li data-i18n="hangul.26">
+                        <strong>El monopolio de la clase Yangban:</strong> la escritura culta dependía de los
+                        <em>Hanja</em> (caracteres chinos adaptados). Su dominio requería décadas de estudio
+                        intensivo, lo que limitaba el acceso a la lectura y escritura a la aristocracia y la
+                        burocracia imperial neoconfucianista.
+                    </li>
+                    <li data-i18n="hangul.27">
+                        <strong>Analfabetismo y desamparo popular:</strong> el pueblo llano no podía comprender
+                        los edictos reales, formular peticiones ante la justicia ni registrar transacciones
+                        comerciales o remedios médicos.
+                    </li>
+                    <li data-i18n="hangul.28">
+                        <strong>Oposición de la burocracia:</strong> eruditos neoconfucianistas sostuvieron que la
+                        creación de un sistema de escritura propio degradaría a Corea al estatus de nación
+                        «bárbara», ocultando el verdadero temor de la élite: perder la ventaja política del
+                        dominio exclusivo de las letras.
+                    </li>
+                </ul>
+
+                <div class="bg-[#fdf2f4] rounded-2xl p-6 my-8 ring-1 ring-[#800020]/10">
+                    <p class="font-semibold text-[#800020] mb-1" data-i18n="hangul.29">La idea central</p>
+                    <p data-i18n="hangul.30">
+                        El Hangul no nació solo para escribir mejor, sino para que el conocimiento dejara de ser
+                        propiedad de unos pocos. Su invención fue, ante todo, un acto de justicia social.
+                    </p>
+                </div>
+
+                <!-- Fundamentos del diseño -->
+                <h2 id="diseno" data-i18n="hangul.31">Los fundamentos de su diseño: ciencia, anatomía y metafísica</h2>
+
+                <h3 data-i18n="hangul.32">1. Principio anatómico (consonantes)</h3>
+                <p data-i18n="hangul.33">
+                    Las consonantes básicas representan gráficamente los movimientos y posiciones de los
+                    órganos fonadores al pronunciar cada sonido:
+                </p>
+
+                <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 my-6">
+                    <div class="bg-stone-50 rounded-xl p-4 text-center ring-1 ring-gray-100">
+                        <span lang="ko" class="block text-4xl font-bold text-[#800020]" data-i18n="hangul.34">ㄱ</span>
+                        <span class="block mt-1 text-xs uppercase tracking-wide text-gray-500" data-i18n="hangul.35">g / k</span>
+                        <p class="mt-2 text-sm leading-snug" data-i18n="hangul.36">La lengua bloqueando la garganta.</p>
+                    </div>
+                    <div class="bg-stone-50 rounded-xl p-4 text-center ring-1 ring-gray-100">
+                        <span lang="ko" class="block text-4xl font-bold text-[#800020]" data-i18n="hangul.37">ㄴ</span>
+                        <span class="block mt-1 text-xs uppercase tracking-wide text-gray-500" data-i18n="hangul.38">n</span>
+                        <p class="mt-2 text-sm leading-snug" data-i18n="hangul.39">La punta de la lengua tocando el alvéolo superior.</p>
+                    </div>
+                    <div class="bg-stone-50 rounded-xl p-4 text-center ring-1 ring-gray-100">
+                        <span lang="ko" class="block text-4xl font-bold text-[#800020]" data-i18n="hangul.40">ㅁ</span>
+                        <span class="block mt-1 text-xs uppercase tracking-wide text-gray-500" data-i18n="hangul.41">m</span>
+                        <p class="mt-2 text-sm leading-snug" data-i18n="hangul.42">El contorno de los labios cerrados.</p>
+                    </div>
+                    <div class="bg-stone-50 rounded-xl p-4 text-center ring-1 ring-gray-100">
+                        <span lang="ko" class="block text-4xl font-bold text-[#800020]" data-i18n="hangul.43">ㅅ</span>
+                        <span class="block mt-1 text-xs uppercase tracking-wide text-gray-500" data-i18n="hangul.44">s</span>
+                        <p class="mt-2 text-sm leading-snug" data-i18n="hangul.45">La forma afilada de un diente para los sonidos dentales.</p>
+                    </div>
+                    <div class="bg-stone-50 rounded-xl p-4 text-center ring-1 ring-gray-100">
+                        <span lang="ko" class="block text-4xl font-bold text-[#800020]" data-i18n="hangul.46">ㅇ</span>
+                        <span class="block mt-1 text-xs uppercase tracking-wide text-gray-500" data-i18n="hangul.47">ng / muda</span>
+                        <p class="mt-2 text-sm leading-snug" data-i18n="hangul.48">El paso del aire a través de la garganta abierta.</p>
+                    </div>
+                </div>
+
+                <h3 data-i18n="hangul.49">2. Principio filosófico (vocales)</h3>
+                <p data-i18n="hangul.50">Las vocales se estructuraron combinando tres símbolos de la cosmología oriental:</p>
+
+                <div class="grid sm:grid-cols-3 gap-4 my-6">
+                    <div class="bg-stone-50 rounded-xl p-5 text-center ring-1 ring-gray-100">
+                        <span class="block text-3xl text-[#800020]">•</span>
+                        <span class="block mt-2 font-semibold text-gray-900" data-i18n="hangul.51">El Cielo</span>
+                        <span class="text-sm text-gray-500" data-i18n="hangul.52">Yang</span>
+                    </div>
+                    <div class="bg-stone-50 rounded-xl p-5 text-center ring-1 ring-gray-100">
+                        <span class="block text-3xl text-[#800020]">━</span>
+                        <span class="block mt-2 font-semibold text-gray-900" data-i18n="hangul.53">La Tierra</span>
+                        <span class="text-sm text-gray-500" data-i18n="hangul.54">Yin</span>
+                    </div>
+                    <div class="bg-stone-50 rounded-xl p-5 text-center ring-1 ring-gray-100">
+                        <span class="block text-3xl text-[#800020]">┃</span>
+                        <span class="block mt-2 font-semibold text-gray-900" data-i18n="hangul.55">El Ser Humano</span>
+                        <span class="text-sm text-gray-500" data-i18n="hangul.56">Nexo entre ambos</span>
+                    </div>
+                </div>
+
+                <h3 data-i18n="hangul.57">3. Influencia fonética del sánscrito</h3>
+                <p data-i18n="hangul.58">
+                    Debido a que el coreano es una lengua aglutinante (no aislante como el chino), Sejong y sus
+                    colaboradores analizaron los sistemas fonéticos de lenguas orientales clásicas, como el
+                    sánscrito y las escrituras índico-tibetanas, para clasificar los sonidos por puntos de
+                    articulación.
+                </p>
+
+                <h3 data-i18n="hangul.59">4. Estructura modular</h3>
+                <p data-i18n="hangul.60">
+                    En lugar de una secuencia lineal, el Hangul empaqueta consonantes y vocales dentro de bloques
+                    silábicos cuadrados. Por ejemplo, <strong lang="ko">한</strong> (<em>Han</em>) reúne tres
+                    letras en un solo bloque:
+                </p>
+
+                <div class="bg-gradient-to-r from-[#fdf2f4] via-white to-white rounded-2xl p-6 sm:p-8 my-8 ring-1 ring-[#800020]/10 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-center">
+                    <span lang="ko" class="text-4xl font-bold text-[#400010]" data-i18n="hangul.61">ㅎ</span>
+                    <span class="text-[#D98496] text-2xl">+</span>
+                    <span lang="ko" class="text-4xl font-bold text-[#400010]" data-i18n="hangul.62">ㅏ</span>
+                    <span class="text-[#D98496] text-2xl">+</span>
+                    <span lang="ko" class="text-4xl font-bold text-[#400010]" data-i18n="hangul.63">ㄴ</span>
+                    <span class="text-[#D98496] text-2xl">=</span>
+                    <span lang="ko" class="text-5xl font-bold text-[#800020]" data-i18n="hangul.64">한</span>
+                </div>
+
+                <!-- La película -->
+                <h2 id="pelicula" data-i18n="hangul.65">La película: <em>Las Letras del Rey</em> (2019)</h2>
+                <p data-i18n="hangul.66">
+                    Dirigida por Jo Cheol-hyeon, la película dramatiza este evento histórico centrándose en el
+                    choque ideológico de la época.
+                </p>
+
+                                <!-- Tráiler de la película como introducción -->
+                                <figure class="my-8">
+                                    <div class="overflow-hidden rounded-2xl ring-1 ring-gray-100 shadow-sm bg-black">
+                                        <iframe
+                                            src="https://www.youtube.com/embed/7CoeEp034N0"
+                                            title="Tráiler de Las Letras del Rey (2019)"
+                                            class="block w-full aspect-video"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin"
+                                            allowfullscreen
+                                            loading="lazy"></iframe>
+                                    </div>
+                                    <figcaption class="mt-3 text-sm text-gray-500 text-center" data-i18n="hangul.67">
+                                        Tráiler oficial de <em>Las Letras del Rey</em> (2019).
+                                    </figcaption>
+                                </figure>
+
+                <h3 data-i18n="hangul.68">Sinopsis y conflicto dramático</h3>
+                <p data-i18n="hangul.69">
+                    El Rey Sejong (Song Kang-ho), aquejado de diabetes y perdiendo la vista, busca crear
+                    urgentemente un alfabeto fácil de aprender para erradicar el analfabetismo. Al enfrentarse a
+                    la feroz resistencia de sus ministros neoconfucianistas, su esposa, la Reina Sohyeon
+                    (Jeon Mi-seon), lo introduce al monje budista Shinmi (Park Hae-il). A pesar de la brecha de
+                    clase y la persecución estatal contra el budismo, Shinmi aporta su profundo conocimiento del
+                    sánscrito para destrabar la estructura del nuevo sistema de escritura.
+                </p>
+
+                <!-- Imágenes de la película -->
+                <div class="grid sm:grid-cols-2 gap-4 my-8">
+                    <figure class="overflow-hidden rounded-2xl ring-1 ring-gray-100 bg-stone-50">
+                        <img src="img/thekingsletter.jpg" alt="Fotograma de la película Las Letras del Rey" class="w-full aspect-video object-cover">
+                    </figure>
+                    <figure class="overflow-hidden rounded-2xl ring-1 ring-gray-100 bg-stone-50">
+                        <img src="img/thekingsletter2.webp" alt="Fotograma de la película Las Letras del Rey" class="w-full aspect-video object-cover">
+                    </figure>
+                </div>
+                <p class="text-sm text-gray-500 text-center -mt-4 mb-6" data-i18n="hangul.70">
+                    Fotogramas de <em>Las Letras del Rey</em> (2019).
+                </p>
+
+                <h3 data-i18n="hangul.71">Personajes principales</h3>
+                <div class="grid sm:grid-cols-3 gap-4 my-6">
+                    <div class="flex flex-col bg-stone-50 rounded-2xl p-5 ring-1 ring-gray-100">
+                        <span class="text-xs uppercase tracking-wide text-[#800020] font-semibold" data-i18n="hangul.72">Rey Sejong</span>
+                        <p class="mt-1 font-semibold text-gray-900" data-i18n="hangul.73">Song Kang-ho</p>
+                        <p class="mt-2 text-sm flex-1" data-i18n="hangul.74">
+                            Retratado como un líder físicamente deteriorado que sufre por la subordinación ante
+                            China y que prefiere el espíritu de un erudito.
+                        </p>
+                        <img src="img/songkangho.jpg" alt="Song Kang-ho como el Rey Sejong"
+                             class="mt-4 w-full aspect-square object-cover rounded-xl ring-1 ring-gray-200 bg-white">
+                    </div>
+                    <div class="flex flex-col bg-stone-50 rounded-2xl p-5 ring-1 ring-gray-100">
+                        <span class="text-xs uppercase tracking-wide text-[#800020] font-semibold" data-i18n="hangul.75">Monje Shinmi</span>
+                        <p class="mt-1 font-semibold text-gray-900" data-i18n="hangul.76">Park Hae-il</p>
+                        <p class="mt-2 text-sm flex-1" data-i18n="hangul.77">
+                            Un monje obstinado de la clase social más baja que ve en esta colaboración una vía
+                            para devolverle la dignidad y presencia al budismo en Joseon.
+                        </p>
+                        <img src="img/parkhaeil.jpg" alt="Park Hae-il como el monje Shinmi"
+                             class="mt-4 w-full aspect-square object-cover rounded-xl ring-1 ring-gray-200 bg-white">
+                    </div>
+                    <div class="flex flex-col bg-stone-50 rounded-2xl p-5 ring-1 ring-gray-100">
+                        <span class="text-xs uppercase tracking-wide text-[#800020] font-semibold" data-i18n="hangul.78">Reina Sohyeon</span>
+                        <p class="mt-1 font-semibold text-gray-900" data-i18n="hangul.79">Jeon Mi-seon</p>
+                        <p class="mt-2 text-sm flex-1" data-i18n="hangul.80">
+                            Devota budista que actúa como puente diplomático y emocional entre el rey y el monje.
+                        </p>
+                        <img src="img/jeonmisun.jpg" alt="Jeon Mi-seon como la Reina Sohyeon"
+                             class="mt-4 w-full aspect-square object-cover rounded-xl ring-1 ring-gray-200 bg-white">
+                    </div>
+                </div>
+
+                <h3 data-i18n="hangul.81">Controversia y recepción comercial</h3>
+                <div class="bg-[#fdf2f4] rounded-2xl p-6 my-6 ring-1 ring-[#800020]/10">
+                    <p class="font-semibold text-[#800020] mb-1" data-i18n="hangul.82">Una película que incomodó</p>
+                    <p data-i18n="hangul.83">
+                        La película desató una gran polémica en Corea del Sur al desafiar la narrativa histórica
+                        oficial de que «el Rey Sejong creó el Hangul por sí solo». Al posicionar al monje budista
+                        Sinmi como co-creador clave, el filme sufrió críticas severas y boicots de diversos
+                        sectores religiosos y conservadores, lo que provocó su fracaso en taquilla al recaudar
+                        menos de 1 millón de entradas (frente a su punto de equilibrio de 3.5 millones).
+                    </p>
+                </div>
+
+                <!-- Difusión -->
+                <h2 id="difusion" data-i18n="hangul.84">¿Cómo fue la difusión del Hangul?</h2>
+                <p data-i18n="hangul.85">
+                    La difusión del Hangul es una de las historias de supervivencia cultural más fascinantes de
+                    Asia Oriental. Aunque la élite gobernante neoconfucianista intentó enterrar el alfabeto
+                    tildándolo despectivamente de <em>«Onmun»</em> (escritura vulgar) o <em>«Amgul»</em>
+                    (escritura de mujeres), el sistema diseñado por el Rey Sejong logró expandirse desde las
+                    sombras de la sociedad hasta convertirse en la piedra angular de la identidad nacional
+                    coreana.
+                </p>
+
+                <h3 data-i18n="hangul.86">La estrategia inicial del Rey Sejong: proyectos populares</h3>
+                <p data-i18n="hangul.87">
+                    Para evitar que el proyecto quedara varado tras su promulgación en 1446, el propio Sejong
+                    utilizó el Hangul para publicar materiales de impacto directo en el pueblo:
+                </p>
+                <ol>
+                    <li data-i18n="hangul.88">
+                        <strong>Manuales agrícolas y médicos:</strong> tradujo tratados de agricultura y remedios
+                        medicinales prácticos para que la gente común los entendiera sin depender de doctores de
+                        la corte.
+                    </li>
+                    <li data-i18n="hangul.89">
+                        <strong>Textos religiosos y lírica:</strong> compuso <em>Worin Cheongang Jigok</em>
+                        («Canciones de la luna reflejada en mil ríos»), una serie de poemas para honrar a su
+                        difunta esposa, la Reina Sohyeon, que sirvieron como demostración pública de la belleza y
+                        versatilidad del Hangul.
+                    </li>
+                    <li data-i18n="hangul.90">
+                        <strong>Cursos de formación para funcionarios:</strong> incluyó el examen de Hangul en la
+                        selección de funcionarios públicos menores, obligando a los rangos administrativos bajos a
+                        aprenderlo para redactar edictos.
+                    </li>
+                </ol>
+
+                <h3 data-i18n="hangul.91">Las verdaderas guardianas del alfabeto: las mujeres y las damas de honor</h3>
+                <p data-i18n="hangul.92">
+                    Puesto que los hombres de la clase aristocrática (<em>Yangban</em>) continuaban escribiendo e
+                    intercambiando diplomacia exclusivamente en chino clásico para mantener su estatus político,
+                    el Hangul fue adoptado masivamente por la mitad olvidada de la población: las mujeres.
+                </p>
+                <ul>
+                    <li data-i18n="hangul.93">
+                        <strong>Damas de la corte (<em>Gungnyeo</em>):</strong> las sirvientas y administradoras
+                        del palacio real utilizaban el Hangul para llevar la contabilidad interna, gestionar
+                        pedidos e intercambiar mensajes privados.
+                    </li>
+                    <li data-i18n="hangul.94">
+                        <strong>Mujeres de la aristocracia:</strong> en una sociedad donde las mujeres permanecían
+                        confinadas en sus hogares, el alfabeto se convirtió en su vía de escape intelectual y
+                        emocional. Escribían diarios, intercambiaban extensas cartas personales (<em>Eonmun</em>)
+                        y redactaban recetas de cocina que circularon entre familias de generación en generación.
+                    </li>
+                    <li data-i18n="hangul.95">
+                        <strong>Peticiones judiciales:</strong> las mujeres del pueblo comenzaron a redactar
+                        demandas e inconformidades directamente en Hangul ante las autoridades, lo que obligó al
+                        propio sistema judicial a aceptar y procesar escritos vernacularmente.
+                    </li>
+                </ul>
+
+                <h3 data-i18n="hangul.96">La explosión de la literatura popular (siglos XVII y XVIII)</h3>
+                <p data-i18n="hangul.97">
+                    Con el tiempo, el Hangul pasó del ámbito estrictamente doméstico al entretenimiento de masas
+                    gracias a dos grandes fenómenos culturales:
+                </p>
+                <div class="grid sm:grid-cols-2 gap-4 my-6">
+                    <div class="bg-stone-50 rounded-2xl p-6 ring-1 ring-gray-100">
+                        <h3 class="mt-0 mb-2 text-lg font-bold text-[#800020]" data-i18n="hangul.98">La novela vernácula</h3>
+                        <p class="text-sm" data-i18n="hangul.99">
+                            <em>Eonmun Soseol</em>: surgieron libros de ficción en coreano dirigidos al público
+                            general. El caso emblemático fue la <em>Historia de Hong Gildong</em> (el equivalente
+                            coreano a Robin Hood). Estas obras se leían en voz alta en los mercados por narradores
+                            ambulantes, alcanzando tanto a analfabetos como a lectores populares.
+                        </p>
+                    </div>
+                    <div class="bg-stone-50 rounded-2xl p-6 ring-1 ring-gray-100">
+                        <h3 class="mt-0 mb-2 text-lg font-bold text-[#800020]" data-i18n="hangul.100">Poesía y canciones</h3>
+                        <p class="text-sm" data-i18n="hangul.101">
+                            <em>Sijo</em> y <em>Pansori</em>: la lírica tradicional coreana y los libretos de la
+                            ópera popular comenzaron a transcribirse en Hangul, preservando la tradición oral
+                            folclórica que el chino escrito jamás pudo capturar.
+                        </p>
+                    </div>
+                </div>
+
+                <h3 data-i18n="hangul.102">El movimiento Sirhak y la reescritura como identidad (siglo XIX)</h3>
+                <p data-i18n="hangul.103">
+                    A finales del periodo Joseon, surgió el <em>Sirhak</em> («Estudio Práctico»), una corriente de
+                    intelectuales reformistas que rechazaba el escolasticismo neoconfucianista rígido. Estos
+                    pensadores abogaron por el desarrollo nacional y reivindicaron el Hangul como el único sistema
+                    capaz de educar a las masas e impulsar la modernización de Corea.
+                </p>
+                <p data-i18n="hangul.104">
+                    A esto se sumó la llegada de los misioneros cristianos, quienes tradujeron la Biblia y los
+                    catecismos íntegramente al Hangul en lugar del chino clásico. Esto impulsó la alfabetización
+                    masiva, especialmente en sectores marginados.
+                </p>
+
+                <h3 data-i18n="hangul.105">Resistencia bajo la ocupación japonesa y estatus oficial (siglo XX)</h3>
+                <p data-i18n="hangul.106">El triunfo definitivo del Hangul ocurrió paradójicamente durante sus momentos más oscuros:</p>
+                <ol>
+                    <li data-i18n="hangul.107">
+                        <strong>Oficialización formal (1894):</strong> en las Reformas Gabo, el gobierno promovió
+                        por primera vez el Hangul como la escritura nacional oficial para documentos
+                        gubernamentales.
+                    </li>
+                    <li data-i18n="hangul.108">
+                        <strong>Ocupación japonesa (1910–1945):</strong> el Imperio del Japón prohibió el uso del
+                        idioma y la escritura coreana en un intento de asimilación cultural. La preservación y
+                        enseñanza clandestina del Hangul por parte de la Sociedad de la Lengua Coreana transformó
+                        al alfabeto en el símbolo máximo de la resistencia patriótica.
+                    </li>
+                    <li data-i18n="hangul.109">
+                        <strong>Post-liberación (1945):</strong> tras la liberación del dominio colonial, tanto
+                        Corea del Norte como Corea del Sur desterraron progresivamente el uso de los caracteres
+                        chinos de los periódicos, escuelas y leyes, adoptando el Hangul como el único sistema de
+                        escritura nacional oficial.
+                    </li>
+                </ol>
+
+                <!-- Línea de tiempo -->
+                <h2 id="linea-de-tiempo" data-i18n="hangul.110">Línea de tiempo: la historia del Hangul</h2>
+
+                <div class="border-l-2 border-[#800020]/20 ml-2 my-8 space-y-8">
+                    <div class="relative pl-7">
+                        <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-[#800020] ring-4 ring-white"></span>
+                        <p class="text-sm font-bold text-[#800020] mb-1">1392</p>
+                        <p class="text-sm text-gray-600" data-i18n="hangul.111">
+                            La dinastía Joseon asume el poder y adopta el neoconfucianismo como ideología oficial,
+                            persiguiendo al budismo.
+                        </p>
+                    </div>
+                    <div class="relative pl-7">
+                        <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-[#800020] ring-4 ring-white"></span>
+                        <p class="text-sm font-bold text-[#800020] mb-1">1443</p>
+                        <p class="text-sm text-gray-600" data-i18n="hangul.112">
+                            El Rey Sejong desarrolla el <em>Hunminjeongeum</em>, el sistema de escritura que
+                            luego se conocería como Hangul.
+                        </p>
+                    </div>
+                    <div class="relative pl-7">
+                        <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-[#800020] ring-4 ring-white"></span>
+                        <p class="text-sm font-bold text-[#800020] mb-1">1446</p>
+                        <p class="text-sm text-gray-600" data-i18n="hangul.113">
+                            Se promulga el alfabeto. Sejong impulsa su difusión con manuales agrícolas y médicos,
+                            poesía y exámenes para funcionarios.
+                        </p>
+                    </div>
+                    <div class="relative pl-7">
+                        <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-[#800020] ring-4 ring-white"></span>
+                        <p class="text-sm font-bold text-[#800020] mb-1" data-i18n="hangul.114">Siglos XVII y XVIII</p>
+                        <p class="text-sm text-gray-600" data-i18n="hangul.115">
+                            Explosión de la literatura popular: novela vernácula (<em>Eonmun Soseol</em>),
+                            <em>Sijo</em> y <em>Pansori</em>.
+                        </p>
+                    </div>
+                    <div class="relative pl-7">
+                        <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-[#800020] ring-4 ring-white"></span>
+                        <p class="text-sm font-bold text-[#800020] mb-1" data-i18n="hangul.116">Siglo XIX</p>
+                        <p class="text-sm text-gray-600" data-i18n="hangul.117">
+                            El movimiento <em>Sirhak</em> reivindica el Hangul; los misioneros cristianos traducen
+                            la Biblia y los catecismos.
+                        </p>
+                    </div>
+                    <div class="relative pl-7">
+                        <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-[#800020] ring-4 ring-white"></span>
+                        <p class="text-sm font-bold text-[#800020] mb-1">1894</p>
+                        <p class="text-sm text-gray-600" data-i18n="hangul.118">
+                            Reformas Gabo: el Hangul se promueve como escritura nacional oficial para documentos
+                            gubernamentales.
+                        </p>
+                    </div>
+                    <div class="relative pl-7">
+                        <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-[#800020] ring-4 ring-white"></span>
+                        <p class="text-sm font-bold text-[#800020] mb-1">1910–1945</p>
+                        <p class="text-sm text-gray-600" data-i18n="hangul.119">
+                            Ocupación japonesa: prohibición del idioma y la escritura coreana. La enseñanza
+                            clandestina lo convierte en símbolo de resistencia.
+                        </p>
+                    </div>
+                    <div class="relative pl-7">
+                        <span class="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-[#800020] ring-4 ring-white"></span>
+                        <p class="text-sm font-bold text-[#800020] mb-1">1945</p>
+                        <p class="text-sm text-gray-600" data-i18n="hangul.120">
+                            Post-liberación: Corea del Norte y Corea del Sur adoptan progresivamente el Hangul
+                            como único sistema de escritura nacional oficial.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-100 mt-12 pt-8">
+                    <p class="text-gray-600" data-i18n="hangul.121">
+                        Del <em>Hunminjeongeum</em> de 1443 a la escritura oficial de dos Estados modernos, la
+                        historia del Hangul demuestra que un alfabeto puede ser mucho más que un conjunto de
+                        signos: puede ser una herramienta de poder, un refugio de resistencia y, finalmente, la
+                        voz de un pueblo.
+                    </p>
+                    <a href="index.html#noticias" class="inline-flex items-center gap-2 mt-4 text-[#800020] font-semibold hover:underline" data-i18n-text="hangul.122">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                        </svg>
+                        Volver a todas las noticias
+                    </a>
+                </div>
+            </article>
+
+            <!-- Índice lateral -->
+            <aside class="hidden lg:block">
+                <div class="sticky top-24">
+                    <div class="bg-white rounded-3xl p-6 ring-1 ring-gray-100 shadow-sm">
+                        <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-4" data-i18n="hangul.123">En este artículo</p>
+                        <nav class="text-sm">
+                            <ul class="space-y-1">
+                                <li data-i18n="hangul.124"><a href="#filosofia" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">El choque filosófico</a></li>
+                                <li data-i18n="hangul.125"><a href="#contexto" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">Control de élite y resistencia</a></li>
+                                <li data-i18n="hangul.126"><a href="#diseno" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">Ciencia, anatomía y metafísica</a></li>
+                                <li data-i18n="hangul.127"><a href="#pelicula" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">Las Letras del Rey (2019)</a></li>
+                                <li data-i18n="hangul.128"><a href="#difusion" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">La difusión del Hangul</a></li>
+                                <li data-i18n="hangul.129"><a href="#linea-de-tiempo" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">Línea de tiempo</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="mt-4 bg-white rounded-3xl p-6 ring-1 ring-gray-100 shadow-sm">
+                        <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-3" data-i18n="hangul.130">Sobre este post</p>
+                        <dl class="text-sm space-y-2">
+                            <div class="flex justify-between gap-3">
+                                <dt class="text-gray-500" data-i18n="hangul.131">Sección</dt>
+                                <dd class="text-gray-900 text-right" data-i18n="hangul.132">Análisis y origen</dd>
+                            </div>
+                            <div class="flex justify-between gap-3">
+                                <dt class="text-gray-500" data-i18n="hangul.133">Curso</dt>
+                                <dd class="text-gray-900 text-right" data-i18n="hangul.134">2°B</dd>
+                            </div>
+                            <div class="flex justify-between gap-3">
+                                <dt class="text-gray-500" data-i18n="hangul.135">Fecha</dt>
+                                <dd class="text-gray-900 text-right">18/05/2026</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Logo y descripción -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-[#800020] p-2 rounded-xl">
+                            <img src="img/logo.png" alt="Colegio Schönthal" width="50" height="10">
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-bold text-xl text-gray-900" data-i18n="hangul.136">EcoEscolar</span>
+                            <span class="text-sm text-gray-500" data-i18n="hangul.137">Tu voz estudiantil</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4 max-w-md" data-i18n="hangul.138">
+                        El periódico digital oficial de nuestra comunidad estudiantil.
+                        Creado por estudiantes, para estudiantes. Compartiendo historias,
+                        eventos y logros de nuestra escuela.
+                    </p>
+                </div>
+
+                <!-- Contacto -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-gray-900" data-i18n="hangul.139">Contacto</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start gap-2" data-i18n-text="hangul.140">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-0.5 flex-shrink-0 text-[#800020]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span>maildepruebaxd@schonthal.esc.edu.ar</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-0.5 flex-shrink-0 text-[#800020]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span>+54 9 11 1234-5678</span>
+                        </li>
+                        <li class="flex items-start gap-2" data-i18n-text="hangul.141">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-0.5 flex-shrink-0 text-[#800020]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Colegio Schönthal, Ciudad Autónoma de Buenos Aires</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-100 mt-8 pt-8 text-center text-gray-500">
+                <p data-i18n="hangul.142">© 2026 SCH Puertas Abiertas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

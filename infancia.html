@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta data-i18n-content="infancia.meta" name="description" content="La infancia como construcción histórica: de los «adultos en pequeño» a la escolarización obligatoria. Un recorrido por Philippe Ariès, la Ley 1420 y la novela Paint de Lee Hee-young.">
+    <title data-i18n="infancia.1">La infancia como construcción histórica | Paint - LEE HEE-YOUNG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/lang/infancia.js" defer></script>
+</head>
+<body data-page="infancia" class="bg-stone-50">
+    <!-- Navbar -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="bg-[#800020] p-2 rounded-xl">
+                        <img src="img/logo.png" alt="Colegio Schönthal" width="50" height="10">
+                    </div>
+                    <div class="hidden sm:flex flex-col">
+                        <span class="font-bold text-xl text-gray-900" data-i18n="infancia.2">SCH Puertas Abiertas</span>
+                        <span class="text-xs text-gray-500" data-i18n="infancia.109">Diario Online</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-6 lg:gap-8 ml-auto mr-4 lg:mr-8">
+                    <a href="index.html#inicio" class="text-gray-700 hover:text-[#800020] transition-colors duration-200 font-medium" data-i18n="infancia.3">Inicio</a>
+                    <a href="index.html#noticias" class="text-gray-700 hover:text-[#800020] transition-colors duration-200 font-medium" data-i18n="infancia.4">Noticias</a>
+                    <button class="bg-[#800020] hover:bg-[#6b001b] text-white px-5 py-2 rounded-full transition-all duration-200 flex items-center gap-2 font-medium" data-i18n-text="infancia.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        Buscar
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <div class="lang-switch" role="group" aria-label="Idioma / 언어">
+                        <button type="button" class="lang-btn is-active" data-lang-btn="es" aria-pressed="true">Esp</button>
+                        <span class="lang-sep" aria-hidden="true">–</span>
+                        <button type="button" class="lang-btn" data-lang-btn="ko" aria-pressed="false">한국어</button>
+                    </div>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-stone-100 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+                <a href="index.html#inicio" class="block px-4 py-2 text-gray-700 hover:bg-[#fdf2f4] hover:text-[#800020] rounded-lg transition-colors" data-i18n="infancia.6">Inicio</a>
+                <a href="index.html#noticias" class="block px-4 py-2 text-gray-700 hover:bg-[#fdf2f4] hover:text-[#800020] rounded-lg transition-colors" data-i18n="infancia.7">Noticias</a>
+                <button class="w-full bg-[#800020] hover:bg-[#6b001b] text-white px-4 py-2 rounded-full transition-all duration-200 flex items-center justify-center gap-2 font-medium" data-i18n-text="infancia.8">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    Buscar
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cabecera del post: imagen de portada difuminada como fondo -->
+    <header class="post-hero">
+        <img src="img/4.webp" alt="" aria-hidden="true" class="post-hero-bg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
+            <a href="index.html#noticias" class="inline-flex items-center gap-2 text-sm font-medium text-[#800020] hover:text-[#400010] transition-colors" data-i18n-text="infancia.9">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Volver a Noticias
+            </a>
+
+            <div class="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-stone-600">
+                <span class="bg-[#800020] text-white px-3 py-1 rounded-full font-semibold" data-i18n="infancia.10">Reseña y análisis</span>
+                <span data-i18n="infancia.11">18 de Mayo 2026</span>
+                <span class="text-stone-400">·</span>
+                <span data-i18n="infancia.12">3°A</span>
+                <span class="text-stone-400">·</span>
+                <span data-i18n="infancia.13">7 min de lectura</span>
+            </div>
+
+            <h1 class="mt-4 text-4xl sm:text-5xl font-bold leading-tight tracking-tight text-[#400010]" data-i18n="infancia.14">
+                La infancia como construcción histórica
+            </h1>
+            <p class="mt-2 text-2xl font-semibold text-[#800020]" data-i18n="infancia.15">Paint - LEE HEE-YOUNG · 페인트 - 이희영</p>
+            <p class="mt-5 text-lg text-stone-600 max-w-2xl" data-i18n="infancia.16">
+                De los «adultos en pequeño» a la escolarización: cómo la niñez dejó de ser
+                una etapa productiva para convertirse en un tiempo propio de formación.
+            </p>
+        </div>
+    </header>
+
+    <!-- Artículo -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+        <div class="lg:grid lg:grid-cols-[minmax(0,1fr)_260px] lg:gap-10">
+
+            <article class="post-content max-w-3xl bg-white rounded-3xl p-6 sm:p-10 ring-1 ring-gray-100 shadow-sm">
+                <p class="text-xl text-gray-700 leading-relaxed" data-i18n="infancia.17">
+                    ¿La infancia siempre fue entendida de la misma manera? ¿Tuvieron los niños siempre un
+                    lugar diferenciado del de los adultos? Aunque hoy nos resulte natural que la niñez posea
+                    espacios, actividades, derechos y sistemas educativos propios, esta concepción es el
+                    resultado de un proceso histórico y social complejo.
+                </p>
+
+                <!-- La pregunta de Janu 301 -->
+                <h2 id="janu" data-i18n="infancia.18">La pregunta de Janu 301</h2>
+                <p data-i18n="infancia.19">
+                    En el capítulo 4 de <em>Paint</em>, «Número de identidad», Janu 301 dialoga con Choi y le
+                    plantea una hipótesis sobre la evolución de las pautas de natalidad:
+                </p>
+
+                <blockquote class="my-6 border-l-4 border-[#800020]/30 pl-5 italic text-gray-600">
+                    <p class="mb-3" data-i18n="infancia.20">
+                        «Hace mucho, cuando los bueyes araban los campos y los seres humanos recogían las
+                        cosechas con sus propias manos, la gente tenía un montón de hijos [...] Porque en
+                        aquella época los niños eran fuerza de trabajo [...] las chicas ayudaban a sus madres a
+                        cuidar de los hermanos menores y hacer las tareas del hogar, y los chicos salían a los
+                        campos, bosques y llanuras a hacer su parte del trabajo. Cuantos más miembros hubiera
+                        en la familia, más tarde se podría cultivar. Así que necesitaban tantos hijos como
+                        fuera posible para aumentar la producción y ganar dinero...»
+                    </p>
+                    <p class="mb-0" data-i18n="infancia.21">
+                        «[...] Las cosas cambiaron. La gente empezó a ir a las escuelas a educarse y podían
+                        ganar dinero con sus conocimientos. A partir de ese momento, empezaron a tener solo uno
+                        o dos hijos para poder criarlos lo mejor posible. En el pasado no podían permitirse
+                        invertir recursos en cada hijo porque tenían muchos, pero a medida que el número fue
+                        decreciendo, la cantidad de recursos que se podía dedicar a ellos aumentó...»
+                    </p>
+                    <footer class="mt-3 text-sm not-italic text-gray-500">— Lee Hee-young, <em>Paint</em> (pp. 75-76)</footer>
+                </blockquote>
+
+                <p data-i18n="infancia.22">
+                    La teoría de Janu 301 invita a mirar la niñez con ojos de historiador: lo que hoy parece
+                    natural —que los chicos tengan su propio espacio, sus tiempos y sus derechos— no siempre
+                    existió. Detrás de esa idea hay cambios económicos, demográficos y políticos que
+                    transformaron el lugar de los niños en la sociedad.
+                </p>
+
+                <!-- Philippe Ariès -->
+                <h2 id="aries" data-i18n="infancia.23">El pensamiento de Philippe Ariès: la infancia como construcción social</h2>
+                <p data-i18n="infancia.24">
+                    El historiador francés <strong>Philippe Ariès</strong>, en su obra
+                    <em>El niño y la vida familiar en el Antiguo Régimen</em> (1960), analizó las
+                    transformaciones en la concepción de la niñez y en los vínculos entre los niños, las
+                    familias y la sociedad. Su aporte fue pionero al demostrar que la infancia no es una mera
+                    categoría biológica, sino una <strong>construcción histórica y cultural</strong>: las
+                    sociedades no siempre han definido de igual forma qué significa ser niño.
+                </p>
+
+                <h3 data-i18n="infancia.25">El niño como «adulto en pequeño»</h3>
+                <p data-i18n="infancia.26">
+                    En las sociedades premodernas, una vez superada la primera infancia, los niños se
+                    integraban tempranamente a la rutina adulta: tareas domésticas, trabajo agrícola o
+                    aprendizaje de oficios. La expresión «adulto en pequeño» sintetiza esta concepción en la
+                    que el niño no estaba claramente segregado del mundo adulto. No implica que se lo
+                    considerara biológica o legalmente igual a un adulto, sino que se esperaba que asumiera
+                    responsabilidades y roles productivos desde muy temprana edad.
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-4 my-6">
+                    <div class="bg-stone-50 rounded-2xl p-6 ring-1 ring-gray-100 border-t-4 border-[#D98496]">
+                        <h3 class="mt-0 mb-2 text-lg font-bold text-[#800020]" data-i18n="infancia.27">Las niñas</h3>
+                        <p class="mb-0" data-i18n="infancia.28">
+                            Colaboraban con el hogar y con el cuidado de los hermanos menores, integradas a la
+                            economía familiar desde muy chicas.
+                        </p>
+                    </div>
+                    <div class="bg-stone-50 rounded-2xl p-6 ring-1 ring-gray-100 border-t-4 border-[#800020]">
+                        <h3 class="mt-0 mb-2 text-lg font-bold text-[#800020]" data-i18n="infancia.29">Los varones</h3>
+                        <p class="mb-0" data-i18n="infancia.30">
+                            Salían a los campos, bosques y llanuras a hacer su parte del trabajo productivo de
+                            la familia.
+                        </p>
+                    </div>
+                </div>
+
+                <p data-i18n="infancia.31">
+                    Como ilustra el fragmento de <em>Paint</em>, los niños no habitaban un universo aparte:
+                    estaban integrados a la economía familiar y compartían los espacios y las tareas de los
+                    adultos.
+                </p>
+
+                <h3 data-i18n="infancia.32">¿Por qué las familias tenían muchos hijos?</h3>
+                <p data-i18n="infancia.33">
+                    Las familias numerosas respondían a que los hijos constituían una fuerza de trabajo
+                    imprescindible para la economía doméstica: a mayor número de integrantes, mayor capacidad
+                    de producción.
+                </p>
+                <p data-i18n="infancia.34">
+                    Sin embargo, el factor económico no es la única explicación. Durante largos períodos, las
+                    tasas de mortalidad infantil eran sumamente elevadas, por lo que tener varios hijos
+                    garantizaba que al menos algunos alcanzaran la adultez. La alta natalidad estaba
+                    estrechamente ligada a las condiciones demográficas y de subsistencia de la época.
+                </p>
+
+                <div class="bg-[#fdf2f4] rounded-2xl p-6 my-8 ring-1 ring-[#800020]/10">
+                    <p class="font-semibold text-[#800020] mb-1" data-i18n="infancia.35">La idea central</p>
+                    <p class="mb-0" data-i18n="infancia.36">
+                        La infancia no es solo una etapa biológica: es una categoría que cada sociedad
+                        construye según sus necesidades económicas, sus creencias y sus instituciones.
+                    </p>
+                </div>
+
+                <!-- La escuela -->
+                <h2 id="escuela" data-i18n="infancia.37">El cambio: la escuela y la infancia como etapa de formación</h2>
+                <p data-i18n="infancia.38">
+                    Con el advenimiento de transformaciones económicas, culturales y sociales, la educación
+                    formal comenzó a ocupar un rol central.
+                </p>
+                <p data-i18n="infancia.39">
+                    Al difundirse la escolarización, el niño dejó de incorporarse tempranamente al trabajo
+                    para pasar gran parte de su tiempo en una institución destinada a su formación. Este giro
+                    redefinió la función del hijo dentro de la dinámica familiar.
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-4 my-6">
+                    <div class="bg-stone-50 rounded-2xl p-6 ring-1 ring-gray-100">
+                        <span class="text-xs uppercase tracking-wide text-gray-500 font-semibold" data-i18n="infancia.40">Antes</span>
+                        <p class="mt-2 mb-0" data-i18n="infancia.41">
+                            El hijo era visto como un <strong>aporte productivo para el presente</strong>.
+                        </p>
+                    </div>
+                    <div class="bg-[#fdf2f4] rounded-2xl p-6 ring-1 ring-[#800020]/10">
+                        <span class="text-xs uppercase tracking-wide text-[#800020] font-semibold" data-i18n="infancia.42">Después</span>
+                        <p class="mt-2 mb-0" data-i18n="infancia.43">
+                            El hijo pasa a ser considerado un <strong>sujeto en el que invertir para el
+                            futuro</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <p data-i18n="infancia.44">
+                    Al reducir el número de hijos, las familias pudieron concentrar mayores recursos (tiempo,
+                    dinero, cuidados y educación) en cada uno de ellos.
+                </p>
+
+                <div class="my-8 overflow-hidden rounded-2xl ring-1 ring-gray-100">
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-[#800020] text-white">
+                            <tr>
+                                <th scope="col" class="px-4 py-3 font-semibold" data-i18n="infancia.45">Modelo premoderno</th>
+                                <th scope="col" class="px-4 py-3 font-semibold" data-i18n="infancia.46">Modelo moderno</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 bg-white">
+                            <tr>
+                                <td class="px-4 py-3" data-i18n="infancia.47">Familias numerosas</td>
+                                <td class="px-4 py-3" data-i18n="infancia.48">Familias reducidas (1-2 hijos)</td>
+                            </tr>
+                            <tr class="bg-stone-50">
+                                <td class="px-4 py-3" data-i18n="infancia.49">Niño como fuerza de trabajo presente</td>
+                                <td class="px-4 py-3" data-i18n="infancia.50">Niño como inversión formativa hacia el futuro</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3" data-i18n="infancia.51">Transición directa al mundo adulto</td>
+                                <td class="px-4 py-3" data-i18n="infancia.52">Período prolongado de escolarización</td>
+                            </tr>
+                            <tr class="bg-stone-50">
+                                <td class="px-4 py-3" data-i18n="infancia.53">Diversificación de recursos</td>
+                                <td class="px-4 py-3" data-i18n="infancia.54">Concentración de recursos por hijo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- El Estado y la Ley 1420 -->
+                <h2 id="estado" data-i18n="infancia.55">La escolarización y el rol del Estado: de la opción a la obligatoriedad</h2>
+                <p data-i18n="infancia.56">
+                    La expansión de la escuela delimitó formalmente el mundo infantil del adulto. La niñez
+                    pasó a habitar un espacio propio (el aula) con tiempos, dinámicas y pares específicos,
+                    consolidándose como una etapa de preparación para la vida en sociedad.
+                </p>
+                <p data-i18n="infancia.57">
+                    Este proceso no fue solo familiar: el Estado asumió un rol activo al considerar la
+                    educación de la niñez como una cuestión de orden público. En la Argentina, un hito
+                    fundamental fue la <strong>Ley 1420 de 1884</strong>, que estableció la educación primaria
+                    común, gratuita y obligatoria.
+                </p>
+
+                <div class="bg-gradient-to-r from-[#fdf2f4] via-white to-white rounded-2xl p-6 sm:p-8 my-8 ring-1 ring-[#800020]/10">
+                    <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-center">
+                        <span class="text-sm font-semibold text-gray-500" data-i18n="infancia.58">Educación privada</span>
+                        <span class="text-[#D98496] text-xl">→</span>
+                        <span class="text-sm font-semibold text-[#800020]" data-i18n="infancia.59">Ley 1420 (1884)</span>
+                        <span class="text-[#D98496] text-xl">→</span>
+                        <span class="text-sm font-semibold text-gray-900" data-i18n="infancia.60">Obligatoriedad estatal</span>
+                    </div>
+                </div>
+
+                <p data-i18n="infancia.61">
+                    La obligatoriedad escolar desplazó la educación de la esfera puramente privada o familiar
+                    hacia el ámbito público. El Estado comenzó a normar y regular una porción sustancial del
+                    tiempo y la crianza de los niños.
+                </p>
+
+                <!-- Resistencias -->
+                <h2 id="resistencias" data-i18n="infancia.62">Resistencias a la escolarización obligatoria</h2>
+                <p data-i18n="infancia.63">
+                    La implementación de la ley no fue un proceso automático ni exento de conflictos. Muchas
+                    familias se opusieron o encontraron dificultades para enviar a sus hijos a la escuela
+                    debido a diversos factores:
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-4 my-6">
+                    <div class="bg-stone-50 rounded-2xl p-5 ring-1 ring-gray-100">
+                        <h3 class="mt-0 mb-2 text-base font-bold text-[#800020]" data-i18n="infancia.64">Económicos</h3>
+                        <p class="mb-0 text-sm" data-i18n="infancia.65">
+                            La necesidad persistente del trabajo infantil para la subsistencia familiar.
+                        </p>
+                    </div>
+                    <div class="bg-stone-50 rounded-2xl p-5 ring-1 ring-gray-100">
+                        <h3 class="mt-0 mb-2 text-base font-bold text-[#800020]" data-i18n="infancia.66">Culturales</h3>
+                        <p class="mb-0 text-sm" data-i18n="infancia.67">
+                            La falta de percepción de la escuela como una prioridad frente a necesidades
+                            cotidianas inmediatas.
+                        </p>
+                    </div>
+                    <div class="bg-stone-50 rounded-2xl p-5 ring-1 ring-gray-100">
+                        <h3 class="mt-0 mb-2 text-base font-bold text-[#800020]" data-i18n="infancia.68">Religiosos</h3>
+                        <p class="mb-0 text-sm" data-i18n="infancia.69">
+                            La disputa entre sectores católicos y el proyecto educativo laico del Estado
+                            liberal, con exhortaciones eclesiásticas para no enviar a los niños a determinadas
+                            escuelas.
+                        </p>
+                    </div>
+                    <div class="bg-stone-50 rounded-2xl p-5 ring-1 ring-gray-100">
+                        <h3 class="mt-0 mb-2 text-base font-bold text-[#800020]" data-i18n="infancia.70">Desconfianza estatal</h3>
+                        <p class="mb-0 text-sm" data-i18n="infancia.71">
+                            La resistencia a que el Estado interfiriera en la autoridad doméstica y en las
+                            decisiones de crianza.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Conclusión -->
+                <h2 id="conclusion" data-i18n="infancia.72">Conclusión</h2>
+                <p data-i18n="infancia.73">
+                    El paso de la concepción del niño como «adulto en pequeño» a la del niño como «sujeto de
+                    derecho y formación» refleja una profunda transformación histórica:
+                </p>
+
+                <div class="bg-gradient-to-r from-[#fdf2f4] via-white to-white rounded-2xl p-6 sm:p-8 my-8 ring-1 ring-[#800020]/10">
+                    <div class="flex flex-wrap items-center justify-center gap-3 text-center text-sm font-semibold">
+                        <span class="text-gray-600" data-i18n="infancia.74">Niño como fuerza de trabajo</span>
+                        <span class="text-[#D98496] text-xl">→</span>
+                        <span class="text-[#800020]" data-i18n="infancia.75">Escolarización</span>
+                        <span class="text-[#D98496] text-xl">→</span>
+                        <span class="text-[#800020]" data-i18n="infancia.76">Intervención estatal y obligatoriedad</span>
+                        <span class="text-[#D98496] text-xl">→</span>
+                        <span class="text-[#400010]" data-i18n="infancia.77">Infancia diferenciada</span>
+                    </div>
+                </div>
+
+                <p data-i18n="infancia.78">
+                    Estudiar la historia de la infancia demuestra que ser niño no ha significado siempre lo
+                    mismo. La concepción actual de la niñez es el resultado de un largo proceso en el que se
+                    entrelazaron cambios demográficos, transformaciones económicas, la institucionalización de
+                    la escuela y la consolidación del Estado moderno.
+                </p>
+                <p data-i18n="infancia.79">
+                    Leer <em>Paint</em> desde esta perspectiva permite entender que la ficción no solo imagina
+                    futuros posibles: también ilumina el modo en que el presente construyó sus propias
+                    categorías. La pregunta de Janu 301 sobre cuántos hijos tener es, en el fondo, una pregunta
+                    sobre qué lugar les damos a la infancia y quién decide ese lugar.
+                </p>
+
+                <!-- Cuestionario -->
+                <h2 id="cuestionario" data-i18n="infancia.80">Cuestionario</h2>
+                <ol>
+                    <li data-i18n="infancia.81">
+                        ¿Por qué el historiador Philippe Ariès afirma que la infancia es una construcción
+                        histórica y cultural, y no solo una etapa biológica?
+                    </li>
+                    <li data-i18n="infancia.82">
+                        ¿A qué hace referencia la expresión «adulto en pequeño» en las sociedades premodernas y
+                        qué rol cumplían los niños en la economía familiar de la época?
+                    </li>
+                    <li data-i18n="infancia.83">
+                        ¿Cómo cambió la percepción del hijo y la distribución de los recursos familiares a
+                        medida que la escuela se volvió central y disminuyó el número de hijos por hogar?
+                    </li>
+                    <li data-i18n="infancia.84">
+                        ¿Qué transformaciones introdujo la Ley 1420 (1884) en la Argentina al establecer la
+                        educación primaria obligatoria, y por qué algunas familias se resistían a ella?
+                    </li>
+                </ol>
+
+                <div class="border-t border-gray-100 mt-12 pt-8">
+                    <p class="text-gray-600" data-i18n="infancia.85">
+                        De la mano de trabajo a la escuela obligatoria, la historia de la infancia muestra que
+                        las categorías que hoy nos parecen naturales fueron construidas por decisiones
+                        económicas, políticas y culturales que vale la pena seguir discutiendo.
+                    </p>
+                    <a href="index.html#noticias" class="inline-flex items-center gap-2 mt-4 text-[#800020] font-semibold hover:underline" data-i18n-text="infancia.86">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                        </svg>
+                        Volver a todas las noticias
+                    </a>
+                </div>
+            </article>
+
+            <!-- Índice lateral -->
+            <aside class="hidden lg:block">
+                <div class="sticky top-24">
+                    <div class="bg-white rounded-3xl p-6 ring-1 ring-gray-100 shadow-sm">
+                        <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-4" data-i18n="infancia.87">En este artículo</p>
+                        <nav class="text-sm">
+                            <ul class="space-y-1">
+                                <li data-i18n="infancia.88"><a href="#janu" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">La pregunta de Janu 301</a></li>
+                                <li data-i18n="infancia.89"><a href="#aries" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">Philippe Ariès</a></li>
+                                <li data-i18n="infancia.90"><a href="#escuela" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">La escuela y la infancia</a></li>
+                                <li data-i18n="infancia.91"><a href="#estado" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">El Estado y la Ley 1420</a></li>
+                                <li data-i18n="infancia.92"><a href="#resistencias" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">Resistencias</a></li>
+                                <li data-i18n="infancia.93"><a href="#conclusion" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">Conclusión</a></li>
+                                <li data-i18n="infancia.94"><a href="#cuestionario" class="block rounded-lg px-3 py-2 text-gray-600 hover:bg-[#fdf2f4] hover:text-[#800020] transition-colors">Cuestionario</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="mt-4 bg-white rounded-3xl p-6 ring-1 ring-gray-100 shadow-sm">
+                        <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-3" data-i18n="infancia.95">Sobre este post</p>
+                        <dl class="text-sm space-y-2">
+                            <div class="flex justify-between gap-3">
+                                <dt class="text-gray-500" data-i18n="infancia.96">Sección</dt>
+                                <dd class="text-gray-900 text-right" data-i18n="infancia.97">Reseña y análisis</dd>
+                            </div>
+                            <div class="flex justify-between gap-3">
+                                <dt class="text-gray-500" data-i18n="infancia.98">Curso</dt>
+                                <dd class="text-gray-900 text-right" data-i18n="infancia.99">3°A</dd>
+                            </div>
+                            <div class="flex justify-between gap-3">
+                                <dt class="text-gray-500" data-i18n="infancia.100">Fecha</dt>
+                                <dd class="text-gray-900 text-right">18/05/2026</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Logo y descripción -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-[#800020] p-2 rounded-xl">
+                            <img src="img/logo.png" alt="Colegio Schönthal" width="50" height="10">
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-bold text-xl text-gray-900" data-i18n="infancia.101">EcoEscolar</span>
+                            <span class="text-sm text-gray-500" data-i18n="infancia.102">Tu voz estudiantil</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4 max-w-md" data-i18n="infancia.103">
+                        El periódico digital oficial de nuestra comunidad estudiantil.
+                        Creado por estudiantes, para estudiantes. Compartiendo historias,
+                        eventos y logros de nuestra escuela.
+                    </p>
+                </div>
+
+                <!-- Contacto -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-gray-900" data-i18n="infancia.104">Contacto</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start gap-2" data-i18n-text="infancia.105">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-0.5 flex-shrink-0 text-[#800020]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span>maildepruebaxd@schonthal.esc.edu.ar</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-0.5 flex-shrink-0 text-[#800020]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <span>+54 9 11 1234-5678</span>
+                        </li>
+                        <li class="flex items-start gap-2" data-i18n-text="infancia.106">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-0.5 flex-shrink-0 text-[#800020]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span>Colegio Schönthal, Ciudad Autónoma de Buenos Aires</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-100 mt-8 pt-8 text-center text-gray-500">
+                <p data-i18n="infancia.107">© 2026 SCH Puertas Abiertas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
