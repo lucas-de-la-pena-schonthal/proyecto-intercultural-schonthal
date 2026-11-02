@@ -4,34 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta data-i18n-content="hangul.meta" name="description" content="Contexto histórico y diseño del Hangul: del monopolio de la élite Yangban al milagro lingüístico del Rey Sejong. Análisis, cine y difusión del alfabeto coreano.">
-    <title data-i18n="hangul.1">Hangul - Alfabeto Coreano | SCH Puertas Abiertas</title>
+    <title data-i18n="hangul.1">Hangul - Alfabeto Coreano | Proyecto Intercultural Coreano-Argentino</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
     <script src="js/i18n.js" defer></script>
     <script src="js/lang/hangul.js" defer></script>
+    <link rel="icon" type="image/png" href="img/icon.png">
+
 </head>
 <body data-page="hangul" class="bg-stone-50">
     <!-- Navbar -->
     <nav class="bg-white/90 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
+            <div class="flex justify-between items-center gap-4 h-16">
                 <!-- Logo -->
-                <a href="index.html" class="flex items-center gap-3">
-                    <div class="bg-[#800020] p-2 rounded-xl">
-                        <img src="img/icon.png" alt="Colegio Schönthal" width="50" height="10">
+                <a href="index.html" class="flex items-center gap-3 min-w-0">
+                    <div class="flex-shrink-0 w-12 h-12 overflow-hidden bg-gray-100 rounded-xl ring-1 ring-gray-200">
+                        <img src="img/icon.png" alt="Colegio Schönthal" class="w-full h-full object-contain">
                     </div>
-                    <div class="hidden sm:flex flex-col">
-                        <span class="font-bold text-xl text-gray-900" data-i18n="hangul.2">Proyecto Intercultural Coreano-Argentino</span>
+                    <div class="hidden sm:flex flex-col min-w-0">
+                        <span class="font-bold text-base lg:text-lg xl:text-xl leading-tight text-gray-900" data-i18n="hangul.2">Proyecto Intercultural Coreano-Argentino</span>
                         <span class="text-xs text-gray-500" data-i18n="hangul.144">Colegio Schönthal</span>
                     </div>
                 </a>
 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center gap-6 lg:gap-8 ml-auto mr-4 lg:mr-8">
-                    <a href="index.html#inicio" class="text-gray-700 hover:text-[#800020] transition-colors duration-200 font-medium" data-i18n="hangul.3">Inicio</a>
-                    <a href="index.html#noticias" class="text-gray-700 hover:text-[#800020] transition-colors duration-200 font-medium" data-i18n="hangul.4">Nuestros Trabajos</a>
-                    <button class="bg-[#800020] hover:bg-[#6b001b] text-white px-5 py-2 rounded-full transition-all duration-200 flex items-center gap-2 font-medium" data-i18n-text="hangul.5">
+                <div class="hidden lg:flex items-center gap-4 xl:gap-6 flex-shrink-0 ml-auto">
+                    <a href="index.html#inicio" class="text-gray-700 hover:text-[#800020] transition-colors duration-200 font-medium whitespace-nowrap" data-i18n="hangul.3">Inicio</a>
+                    <a href="index.html#noticias" class="text-gray-700 hover:text-[#800020] transition-colors duration-200 font-medium whitespace-nowrap" data-i18n="hangul.4">Nuestros Trabajos</a>
+                    <button type="button" data-search-open class="bg-[#800020] hover:bg-[#6b001b] text-white px-5 py-2 rounded-full transition-all duration-200 flex items-center gap-2 font-medium whitespace-nowrap" data-i18n-text="hangul.5">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
@@ -40,13 +42,13 @@
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <div class="flex items-center gap-2 sm:gap-3">
+                <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0 lg:ml-6">
                     <div class="lang-switch" role="group" aria-label="Idioma / 언어">
                         <button type="button" class="lang-btn is-active" data-lang-btn="es" aria-pressed="true">Esp</button>
                         <span class="lang-sep" aria-hidden="true">–</span>
                         <button type="button" class="lang-btn" data-lang-btn="ko" aria-pressed="false">한국어</button>
                     </div>
-                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-stone-100 transition-colors">
+                    <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-stone-100 transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
@@ -55,10 +57,10 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+            <div id="mobile-menu" class="hidden lg:hidden pb-4 space-y-2">
                 <a href="index.html#inicio" class="block px-4 py-2 text-gray-700 hover:bg-[#fdf2f4] hover:text-[#800020] rounded-lg transition-colors" data-i18n="hangul.6">Inicio</a>
                 <a href="index.html#noticias" class="block px-4 py-2 text-gray-700 hover:bg-[#fdf2f4] hover:text-[#800020] rounded-lg transition-colors" data-i18n="hangul.7">Noticias</a>
-                <button class="w-full bg-[#800020] hover:bg-[#6b001b] text-white px-4 py-2 rounded-full transition-all duration-200 flex items-center justify-center gap-2 font-medium" data-i18n-text="hangul.8">
+                <button type="button" data-search-open class="w-full bg-[#800020] hover:bg-[#6b001b] text-white px-4 py-2 rounded-full transition-all duration-200 flex items-center justify-center gap-2 font-medium" data-i18n-text="hangul.8">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
@@ -589,7 +591,7 @@
                             </div>
                             <div class="flex justify-between gap-3">
                                 <dt class="text-gray-500" data-i18n="hangul.135">Fecha</dt>
-                                <dd class="text-gray-900 text-right">18/05/2026</dd>
+                                <dd class="text-gray-900 text-right" data-i18n="hangul.11">18/05/2026</dd>
                             </div>
                         </dl>
                     </div>
@@ -601,41 +603,41 @@
     <!-- Footer -->
     <footer class="bg-white border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
                 <!-- Logo y descripción -->
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="bg-[#800020] p-2 rounded-xl">
-                            <img src="img/icon.png" alt="Colegio Schönthal" width="50" height="10">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4 min-w-0">
+                        <div class="flex-shrink-0 w-12 h-12 overflow-hidden bg-gray-100 rounded-xl ring-1 ring-gray-200">
+                            <img src="img/icon.png" alt="Colegio Schönthal" class="w-full h-full object-contain">
                         </div>
-                        <div class="flex flex-col">
-                            <span class="font-bold text-xl text-gray-900" data-i18n="index.37">Proyecto Intercultural Coreano-Argentino</span>
-                            <span class="text-sm text-gray-500" data-i18n="index.38">Colegio Schönthal</span>
+                        <div class="flex min-w-0 flex-col">
+                            <span class="font-bold text-base sm:text-lg xl:text-xl leading-tight text-gray-900" data-i18n="hangul.136">Proyecto Intercultural Coreano-Argentino</span>
+                            <span class="text-sm text-gray-500" data-i18n="hangul.137">Colegio Schönthal</span>
                         </div>
                     </div>
-                    <p class="text-gray-600 mb-4 max-w-md" data-i18n="index.39">
+                    <p class="text-gray-600 mb-4 max-w-2xl leading-relaxed" data-i18n="hangul.138">
                         Este proyecto pedagógico transversal del Colegio Schönthal (nivel secundario) transforma la barrera lingüística en un puente de intercambio educativo y social para la comunidad estudiantil de origen coreano. Basado en la pedagogía de Paulo Freire y en el valor de la lengua como identidad, promueve el aprendizaje del español al tiempo que recupera los saberes culturales y lingüísticos de los alumnos. Mediante la literatura comparada, la historia de los alfabetos (Hangul y castellano), el cine y la articulación entre diversas materias, la propuesta convierte la diversidad cultural en un eje de equidad y desarrollo comunitario.
 
-                        <br> <b>Docentes a cargo:</b> Lucas Leonel de la Peña y Verónica Almirón.</b>
+                        <br> <b>Docentes a cargo:</b> Lucas Leonel de la Peña y Verónica Almirón.
                     </p>
                 </div>
 
                 <!-- Contacto -->
-                <div>
-                    <h3 class="font-bold text-lg mb-4 text-gray-900" data-i18n="index.40">Contacto</h3>
+                <div class="min-w-0">
+                    <h3 class="font-bold text-lg mb-4 text-gray-900" data-i18n="hangul.139">Contacto</h3>
                     <ul class="space-y-3 text-gray-600">
-                        <li class="flex items-start gap-2" data-i18n-text="index.41">
+                        <li class="flex items-start gap-2" data-i18n-text="hangul.140">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-0.5 flex-shrink-0 text-[#800020]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
-                            <span>correo@schonthal.esc.edu.ar</span>
+                            <span class="min-w-0 flex-1 break-words">correo@schonthal.esc.edu.ar</span>
                         </li>
-                        <li class="flex items-start gap-2" data-i18n-text="index.42">
+                        <li class="flex items-start gap-2" data-i18n-text="hangul.141">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-0.5 flex-shrink-0 text-[#800020]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            <span> Av. Nazca 537, Cdad. Autónoma de Buenos Aires</span>
+                            <span class="min-w-0 flex-1 break-words"> Av. Nazca 537, Cdad. Autónoma de Buenos Aires</span>
                         </li>
                     </ul>
                 </div>
@@ -643,7 +645,7 @@
 
             <!-- Copyright -->
             <div class="border-t border-gray-100 mt-8 pt-8 text-center text-gray-500">
-                <p data-i18n="index.43">© 2026 SCH Proyecto Intercultural. Todos los derechos reservados.</p>
+                <p data-i18n="hangul.142">© 2026 SCH Proyecto Intercultural. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>

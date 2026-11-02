@@ -102,6 +102,67 @@
     color: rgba(255, 255, 255, 0.8);
 }
 
+/* Mantiene cortes consistentes sin forzar al párrafo a tener líneas artificialmente iguales. */
+.hero-title {
+    max-width: 18ch;
+    text-wrap: balance;
+}
+
+.hero-copy {
+    max-width: 65ch;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.hero-section {
+    min-height: calc(100vh - 13.5rem);
+}
+
+.hero-section + #noticias {
+    padding-top: 2rem;
+}
+
+.hero-section + #noticias > div:first-child {
+    margin-bottom: 2rem;
+}
+
+.hero-background {
+    transform: translateY(0.75rem) scale(1.05);
+}
+
+@media (max-width: 640px) {
+    .hero-title {
+        max-width: 16ch;
+    }
+
+    .hero-copy {
+        max-width: none;
+    }
+}
+
+@media (min-width: 641px) and (max-height: 600px) {
+    .hero-section > div {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .hero-content > :not([hidden]) ~ :not([hidden]) {
+        margin-top: 1rem;
+    }
+
+    .hero-title {
+        max-width: none;
+        font-size: 3rem;
+        line-height: 1.1;
+    }
+
+    .hero-copy {
+        font-size: 1.125rem;
+        line-height: 1.45;
+    }
+
+}
+
 /* Evita el parpadeo del texto original mientras se aplica el idioma guardado. */
 html.i18n-loading body {
     visibility: hidden;
@@ -132,6 +193,179 @@ html.i18n-loading body {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+}
+
+/* ------------------------------------------------------------------
+   Buscador de artículos
+   ------------------------------------------------------------------ */
+body.search-open {
+    overflow: hidden;
+}
+
+.search-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 80;
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5rem 1rem 2rem;
+}
+
+.search-modal.is-open {
+    display: flex;
+}
+
+.search-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(17, 24, 39, 0.45);
+    backdrop-filter: blur(3px);
+}
+
+.search-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 42rem;
+    max-height: 70vh;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 1.25rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.search-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.search-icon {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #9ca3af;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #111827;
+    font-size: 1rem;
+}
+
+.search-input::placeholder {
+    color: #9ca3af;
+}
+
+.search-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    border-radius: 9999px;
+    background: transparent;
+    color: #6b7280;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.search-close:hover {
+    background-color: #f3f4f6;
+    color: #800020;
+}
+
+.search-close svg {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+.search-panel-body {
+    overflow-y: auto;
+    padding: 0.75rem;
+}
+
+.search-hint {
+    padding: 0.9rem 0.5rem;
+    color: #6b7280;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.search-results {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.search-results[hidden],
+.search-hint[hidden] {
+    display: none;
+}
+
+.search-result {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 0.85rem 1rem;
+    border-radius: 0.85rem;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+}
+
+.search-result:hover,
+.search-result:focus-visible {
+    background-color: #fdf2f4;
+    outline: none;
+}
+
+.search-result-meta {
+    color: #9ca3af;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.search-result-title {
+    color: #800020;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.search-result-desc {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    color: #4b5563;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+    .search-modal {
+        padding-top: 1rem;
+    }
+
+    .search-panel {
+        max-height: 85vh;
+    }
 }
 
 /* ------------------------------------------------------------------
