@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>probe</title>
+<style>html,body{margin:0;background:#ddd}iframe{border:0;display:block}</style>
+</head>
+<body>
+<iframe id="f" src="index.html" style="width:390px;height:844px"></iframe>
+<script>
+window.__probe = [];
+const sizes = [[390,844],[768,1024],[1024,768],[1366,768],[1920,1080]];
+const f = document.getElementById('f');
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+function rect(el){
+  if(!el) return null;
+  const r = el.getBoundingClientRect();
+  return {x:Math.round(r.x), y:Math.round(r.y), w:Math.round(r.width), h:Math.round(r.height), right:Math.round(r.right)};
+}
+
+async function run(){
+  for (const [w,h] of sizes){
+    f.style.width = w+'px'; f.style.height = h+'px';
+    await sleep(400);
+    const d = f.contentDocument, win = f.contentWindow;
+    const q = s => d.querySelector(s);
+    const nav = q('nav');
+    const navInner = nav.children[0];
+    const row = navInner.children[0];
+    const desktop = row.children[1];
+    const mobileWrap = row.children[2];
+    const hero = q('#inicio');
+    const heroInner = hero.lastElementChild;
+    const h1 = q('h1');
+    const noticias = q('#noticias');
+    const footer = q('footer');
+    const fInner = footer.children[0];
+    const fGrid = fInner.children[0];
+    const copyright = fInner.lastElementChild;
+    const heroRect = rect(hero), innerRect = rect(heroInner), h1Rect = rect(h1);
+    const cs = win.getComputedStyle(navInner);
+    window.__probe.push({
+      size: w+'x'+h,
+      docScrollW: d.documentElement.scrollWidth,
+      docClientW: d.documentElement.clientWidth,
+      navH: rect(nav).h,
+      logoBox: rect(q('nav .rounded-xl')),
+      logoImg: rect(q('nav img')),
+      desktopMenu: desktop ? rect(desktop) : null,
+      desktopVisible: desktop ? win.getComputedStyle(desktop).display : null,
+      navRightPad: cs.paddingRight,
+      navInnerRight: rect(navInner).right,
+      langNav: rect(mobileWrap.children[0]),
+      menuOverflowsNav: desktop && win.getComputedStyle(desktop).display !== 'none'
+        ? (rect(mobileWrap).right > rect(navInner).right + 1) : null,
+      heroH: heroRect.h,
+      heroGapTop: h1Rect.y - heroRect.y,
+      heroGapBottom: (heroRect.y + heroRect.h) - (innerRect.y + innerRect.h),
+      heroInnerH: innerRect.h,
+      h1X: h1Rect.x,
+      noticiasX: rect(noticias.children[0]).x,
+      footerDescX: rect(fGrid.children[0]).x,
+      footerContactX: rect(fGrid.children[1]).x,
+      footerContactW: rect(fGrid.children[1]).w,
+      footerEmptyRight: rect(fInner).right - 24 - rect(fGrid.children[1]).right,
+      copyrightAlign: win.getComputedStyle(copyright).textAlign,
+      searchBtn: !!q('[data-search-open]')
+    });
+  }
+  window.__done = true;
+}
+f.addEventListener('load', () => { run(); }, { once:true });
+</script>
+</body>
+</html>
