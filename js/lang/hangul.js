@@ -10,7 +10,7 @@ window.I18N.hangul = {
     "hangul.8": "검색",
     "hangul.9": "작품 목록으로 돌아가기",
     "hangul.10": "기원 분석과 해설",
-    "hangul.11": "2026년 5월 18일",
+    "hangul.11": "2026",
     "hangul.12": "2°B",
     "hangul.13": "읽는 데 10분",
     "hangul.14": "한글 - 한국어 문자",

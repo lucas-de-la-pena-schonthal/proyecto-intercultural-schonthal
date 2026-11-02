@@ -10,7 +10,7 @@ window.I18N.infancia = {
     "infancia.8": "검색",
     "infancia.9": "작품 목록으로 돌아가기",
     "infancia.10": "리뷰와 분석",
-    "infancia.11": "2026년 5월 18일",
+    "infancia.11": "2026",
     "infancia.12": "3°A",
     "infancia.13": "읽는 데 7분",
     "infancia.14": "역사가 만들어 낸 어린 시절",

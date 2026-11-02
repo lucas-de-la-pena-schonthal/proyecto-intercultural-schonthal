@@ -10,7 +10,7 @@ window.I18N.ficcion = {
     "ficcion.8": "검색",
     "ficcion.9": "작품 목록으로 돌아가기",
     "ficcion.10": "허구와 역사",
-    "ficcion.11": "2026년 5월 18일",
+    "ficcion.11": "2026",
     "ficcion.12": "3°B",
     "ficcion.13": "읽는 데 12분",
     "ficcion.14": "허구와 역사",
